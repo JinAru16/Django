@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <title>오늘 뭐입지</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href={% static 'Main/css/styles.css'%}>
+</head>
+
+<body>
+  <div> {% block date-block %}
+        {% endblock date-block%}
+  </div>
+
+  <hr/>
+
+  <h1>오늘 뭐입지</h1>
+  <h2></h2>
+  
+<h2> 오늘 뭐입지 </h2>
+<a href ="/New">New</a>
+<a href ="/Top">Top</a>
+<a href ="/Bottom">Bottom</a>
+<a href ="/Dress">Dress</a>
+<a href ="/Outer">Outer</a>
+<a href ="/Shirt_Blouse">Shirt/Blouse</a>
+<a href ="/Outer">Outer</a>
+<a href ="/Summer_Knit">Summer Knit</a>
+
+
+  <div class="main-container">
+  {% block main-container%}
+  {% endblock main-container%}
+  </div>
+</body>
+</html>

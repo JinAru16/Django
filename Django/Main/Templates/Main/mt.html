@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>오늘 뭐입지</title>
+    <style>
+        @font-face{
+            font-family:'NanumGothic'; /*글꼴*/
+            src: local('NanumGothic'),
+            url('NanumGothic.eot'),
+            url('NanumGothic.woff') format('woff'),
+            url('NanumGothic.ttf') format('truetype');
+        }
+        body{
+            margin:0;
+            font-family: 'NanumGothic'; /*글꼴*/
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        #mypage{
+            background-color: rgb(182, 182, 182);
+            color: black;
+            flex-basis: 35px;
+            padding-right: 150px;
+            padding-left: 150px;
+            display: flex;
+            justify-content:flex-end;
+            align-items: center;
+        }
+        #mypage a{
+            margin-right: 50px;
+        }
+        header{
+            /* background-color: orange; */
+            display: flex;
+            height: 120px;
+            padding-right: 300px;
+            padding-left: 300px;
+        }
+        header #logo{
+            align-self: center;
+            font-size: 2.5rem;
+        }
+        header #category{
+            text-align: right;
+            /* background-color: gray; */
+            align-self: flex-end;
+            margin-left: auto;
+            margin-bottom: 30px;
+            flex-grow: 1;
+            font-size: 1.3rem;
+        }
+        header #category a{
+            margin-left: 50px;
+            /* background-color: orchid; */
+        }
+
+        .content{
+            margin-top: 65px;
+            display: flex;
+            flex-direction: column;
+        }
+        .content main{
+            margin: auto;
+            min-width: 1400px;
+        }
+        .subtitle{
+            text-align: center;
+            /* background-color: palegreen; */
+        }
+        .clothes{
+            width:330px;
+            /* background-color: palevioletred; */
+        }
+        .clothesImg{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <nav id="mypage">
+            <a href ="/Login">로그인</a>
+            <a href ="/Resistration">회원가입</a>
+            <a href ="/ShoppinCart">장바구니</a>
+            <a href ="/Order">주문</a>
+            <a href ="/MyPage">마이페이지</a>
+        </nav>
+        <header>
+            <h1 id="logo">오늘 뭐입지</h1>
+            <nav id="category">
+                <a href ="/New">New</a>
+                <a href ="/Best">Best</a>
+                <a href ="/Top">Top</a>
+                <a href ="/Bottom">Bottom</a>
+                <a href ="/Shirt_Blouse">Shirt/Blouse</a>
+                <a href ="/Shoes">Shoes</a>
+                <a href ="/Bag">Bag</a>
+                
+                <a>검색</a> <!-- 후에 아이콘으로 대체 예정 -->
+            </nav>
+        </header>
+
+        <section class="content">
+            <div>
+                <img src="mainbenu1.jpg">
+            </div>
+
+            <main>
+                <article>
+                    <h3 class="subtitle">#WEEKLY BEST</h3>
+                    <div class="clothes">
+                        <img class = "clothesImg" src="clothes1.jpg">
+                        <p>썸머 쿨 아리랑</p>
+                        <p>15000</p>
+                    </div>
+                </article>
+    
+                <article>
+                    <h3 class="subtitle">#MONTHLY BEST</h3>
+                    <div class="clothes">
+                        <img class = "clothesImg" src="clothes1.jpg">
+                        <p>썸머 쿨 아리랑</p>
+                        <p>15000</p>
+                    </div>
+                </article>
+            </main>
+        </section>
+    </div>
+</body>
+</html>
