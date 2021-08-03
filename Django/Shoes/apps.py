@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class ShoeConfig(AppConfig):
-    name = 'Shoe'
+class ShoesConfig(AppConfig):
+    name = 'Shoes'

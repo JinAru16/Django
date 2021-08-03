@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'Outer', #10
     'Main', #6
     'Best', #2
-    'Shoes', #13
+    'Shoes',
     'Bag', #1
     'Login', #5
     'ShoppingCart', #14
