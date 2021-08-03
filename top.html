@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>오늘 뭐입지</title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> <!-- 아이콘 -->
+    <!-- 나중에 css파일로 따로 옮길 예정 -->
+<style>
+    @font-face{
+            font-family:'NanumGothic'; /*글꼴*/
+            src: local('NanumGothic'),
+            url('NanumGothic.eot'),
+            url('NanumGothic.woff') format('woff'),
+            url('NanumGothic.ttf') format('truetype');
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+
+        body{
+            margin:0;
+            font-family: 'NanumGothic'; /*글꼴*/
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        /* 맨 위에 로그인, 장바구니, 마이페이지 있는 곳 */
+        #mypage{ 
+            background-color: rgb(182, 182, 182);
+            display: flex;
+            flex-basis: 35px; /*높이*/
+            padding-right: 150px;
+            padding-left: 150px;
+            justify-content:flex-end; /*오른쪽 정렬*/
+            align-items: center; /*글들이 가운데 오게하기 위해*/
+        }
+        #mypage a{
+            margin-right: 50px;
+        }
+        /* 헤더. 로고랑 카테고리 있는 곳 */
+        header{
+            /* background-color: orange; */
+            display: flex;
+            height: 120px;
+            padding-right: 300px;
+            padding-left: 300px;
+        }
+        header #logo{ /*메인 로고*/
+            align-self: center;
+            font-size: 2.5rem;
+            flex-shrink: 0; /*창 줄여도 글 뭉개지지 않도록*/
+        }
+        header nav#category{ /*카테고리*/
+            /* background-color: gray; */
+            text-align: right; /*오른쪽 정렬*/
+            align-self: flex-end;
+            margin-left: auto;
+            margin-bottom: 30px;
+            flex-grow: 1;
+            font-size: 1.3rem;
+        }
+        header nav#category a{
+            /* background-color: orchid; */
+            margin-left: 50px;
+        }
+
+        /* 주 컨텐즈 영역 */
+        .content{
+            display: flex;
+            flex-direction: column;
+            margin-top: 65px;
+        }
+        .content div#mainbenu{ /*제일 큰 사진*/
+            margin-bottom: 100px;
+        }
+        .content main{ /*메인 영역*/
+            margin: auto; /*가운데 정렬*/
+            min-width: 1400px; /*폭 고정하려고*/
+            max-width: 1400px;
+        }
+        main article{ /*위클리 베스트, 먼슬리 베스트 있는 곳*/
+            margin-top: 100px;
+        }
+        main article .subtitle{ /*제목*/
+            /* background-color: palegreen; */
+            text-align: center; /*가운데 정렬*/
+            font-size: 1.6rem;
+            margin-bottom: 100px;
+        }
+
+        main article .best{
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        main article .closet{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
+            display:flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .box{
+            background-color: blanchedalmond;
+            padding: 60px;
+            border-style: none;
+            margin-bottom: 80px;
+        }
+
+        #array{            
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        
+        .bestclothes{
+            width: 380px;
+            height: 550px;
+        }
+
+        .clothes{
+            width:330px;
+            height: 500px;
+            /* background-color: palevioletred; */
+        }
+        .clothesImg{ /*옷 이미지*/
+            width: 100%;
+        }
+</style>
+<body>
+    <div class = "container">
+        <nav id="mypage">
+            <a>로그인</a>
+            <a>회원가입</a>
+            <a>장바구니<i class="fas fa-shopping-cart"></i></a>
+            <a>주문<i class="fas fa-truck"></i></a>
+            <a>마이페이지</a>
+        </nav>
+        <header>
+            <h1 id="logo">오늘 뭐입지</h1>
+            <nav id="category">
+                <a href="https://j2kbtodo.com/">BEST</a> <!-- 테스트로 j2kb사이트 연결함 -->
+                <a>NEW</a>
+                <a>CODI</a>
+                <a><strong>TOP</strong></a>
+                <a>PANTS</a>
+                <a>SHOES & BAG</a>
+                <a><i class="fas fa-search"></i></a>
+            </nav>
+        </header>
+
+            <!-- 메인 컨텐트 영역 -->
+            <main>
+                <article>
+                    <h3 class="subtitle">TOP</h3>
+                    <h4 class="best">#BEST</h4>
+                    <div class="box">
+                    <div class="closet">
+                        <div class="bestclothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                    <div class="bestclothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="container">
+                        <nav id = "array"> 
+                            <a>최신순</a>
+                            <a>인기순</a>
+                            <a>낮은가격순</a>
+                            <a>리뷰많은순</a>
+                        </nav>
+                    </div>
+                    <div class="closet">                      
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </section>
+
+        <footer>
+            <!-- 미정. -->
+        </footer>
+    </div>
+</body>
