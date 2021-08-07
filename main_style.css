@@ -18,7 +18,7 @@ ul{
 li{  
     list-style: none;
 }
-nav#category li, nav#mypage li{
+nav#nav_category li, nav#nav_mypage li{
     display: inline;
 }
 
@@ -32,7 +32,7 @@ body{
 }
 
 /* 맨 위에 로그인, 장바구니, 마이페이지 있는 곳 */
-#mypage{ 
+#nav_mypage{ 
     background-color: rgb(182, 182, 182);
     display: flex;
     height: 35px; /*높이*/
@@ -41,7 +41,7 @@ body{
     justify-content:flex-end; /*오른쪽 정렬*/
     align-items: center; /*글들이 가운데 오게하기 위해*/
 }
-#mypage a{
+#nav_mypage a{
     margin-right: 50px;
 }
 /* 헤더. 로고랑 카테고리 있는 곳 */
@@ -52,12 +52,12 @@ header{
     padding-right: 15%;
     padding-left: 15%;
 }
-header #logo{ /*메인 로고*/
+#nav_mainlogo{ /*메인 로고*/
     align-self: center;
     font-size: 2.5rem;
     flex-shrink: 0; /*창 줄여도 글 뭉개지지 않도록*/
 }
-header nav#category{ /*카테고리*/
+#nav_category{ /*카테고리*/
     /* background-color: gray; */
     text-align: right; /*오른쪽 정렬*/
     align-self: flex-end;
@@ -66,14 +66,14 @@ header nav#category{ /*카테고리*/
     flex-grow: 1;
     font-size: 1.3rem;
 }
-#category > ul{
+#nav_category > ul{
     display: inline;
 }
-header nav#category a, #nav_menu, #nav_search{
+#nav_category a, #nav_menu, #nav_search{
     /* background-color: orchid; */
     margin-left: 50px;
 }
-#nav_menubar{
+#nav_menuBtn{
     align-self: center;
     font-size: 1.3rem;
     display: none;
@@ -82,14 +82,25 @@ header nav#category a, #nav_menu, #nav_search{
     align-self: center;
     font-size: 1.3rem;
 }
+#menubar_overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width:100%;
+    height: 100%;
+    right: -100%;
+    top: 0;
+    transition: right ease 0.3s;
+    position: fixed; 
+}
 #menuWrap{
     background-color: #e6e6e6;
     position:absolute;
     width:500px;
     height:100%;
-    position: fixed;
-    right: -500px;
-    transition: right ease 0.3s; /*transition: 적용할 속성, 진행속도, 총 시간*/
+    position: fixed; 
+    right: -500px; 
+    top:0;
+    transition: right ease 0.3s; /* 적용할 속성, 진행속도, 총 시간 */
 }
 #menuWrap ul{
     padding:0;
@@ -101,32 +112,19 @@ header nav#category a, #nav_menu, #nav_search{
     padding: 30px 30px;
     /* background-color: blueviolet; */
     margin: 0;
-    /* padding-top:70px; */
 }
 #menuWrap li{
     /* background-color: aqua; */
-    /* padding: ; */
-    /* text-align: center; */
-    /* margin-bottom: 30%; */
     font-size: 1.4rem;
     width:fit-content;
 }
-#navbar_x{
+#menubar_x{
     font-size: 2.5rem;
     position: absolute;
     right: 450px;
     top:10px;
 }
 
-#dimmed { 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    z-index: 300; 
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0, 0, 0, 0.5); 
-}
 
 
 /* 주 컨텐즈 영역 */
@@ -167,15 +165,22 @@ main article .closet{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
 }
 
 
-@media screen and ( max-width: 1620px){
+/* 폭이 1620 아래가 될 때 */
+@media screen and ( max-width: 1620px){ 
    #menuWrap.on{
        right:0;
+       display: block;
        transition: right ease 0.3s;
-   }
-   #nav_menubar{
+    }
+    #menubar_overlay.on{
+        right: 0;
+        display: block;
+        transition: right ease 0.3s;
+    }
+   #nav_menuBtn{
        display: inline;
    }
-   #category > ul{
+   #nav_category > ul{
        display: none;
    }
 }
