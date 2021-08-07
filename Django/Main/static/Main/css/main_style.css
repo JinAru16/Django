@@ -1,0 +1,181 @@
+@font-face{
+    font-family:'NanumGothic'; /*글꼴*/
+    src: local('NanumGothic'),
+    url('NanumGothic.eot'),
+    url('NanumGothic.woff') format('woff'),
+    url('NanumGothic.ttf') format('truetype');
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+}
+ul{
+    padding-left:0;
+}
+li{  
+    list-style: none;
+}
+nav#category li, nav#mypage li{
+    display: inline;
+}
+
+body{
+    margin:0;
+    font-family: 'NanumGothic'; /*글꼴*/
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* 맨 위에 로그인, 장바구니, 마이페이지 있는 곳 */
+#mypage{ 
+    background-color: rgb(182, 182, 182);
+    display: flex;
+    height: 35px; /*높이*/
+    padding-right: 10%;
+    padding-left: 10%;
+    justify-content:flex-end; /*오른쪽 정렬*/
+    align-items: center; /*글들이 가운데 오게하기 위해*/
+}
+#mypage a{
+    margin-right: 50px;
+}
+/* 헤더. 로고랑 카테고리 있는 곳 */
+header{
+    /* background-color: orange; */
+    display: flex;
+    height: 120px;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+header #logo{ /*메인 로고*/
+    align-self: center;
+    font-size: 2.5rem;
+    flex-shrink: 0; /*창 줄여도 글 뭉개지지 않도록*/
+}
+header nav#category{ /*카테고리*/
+    /* background-color: gray; */
+    text-align: right; /*오른쪽 정렬*/
+    align-self: flex-end;
+    margin-left: auto;
+    margin-bottom: 30px;
+    flex-grow: 1;
+    font-size: 1.3rem;
+}
+#category > ul{
+    display: inline;
+}
+header nav#category a, #nav_menu, #nav_search{
+    /* background-color: orchid; */
+    margin-left: 50px;
+}
+#nav_menubar{
+    align-self: center;
+    font-size: 1.3rem;
+    display: none;
+}
+#nav_search{
+    align-self: center;
+    font-size: 1.3rem;
+}
+#menuWrap{
+    background-color: #e6e6e6;
+    position:absolute;
+    width:500px;
+    height:100%;
+    position: fixed;
+    right: -500px;
+    transition: right ease 0.3s; /*transition: 적용할 속성, 진행속도, 총 시간*/
+}
+#menuWrap ul{
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px;
+    /* background-color: blueviolet; */
+    margin: 0;
+    /* padding-top:70px; */
+}
+#menuWrap li{
+    /* background-color: aqua; */
+    /* padding: ; */
+    /* text-align: center; */
+    /* margin-bottom: 30%; */
+    font-size: 1.4rem;
+    width:fit-content;
+}
+#navbar_x{
+    font-size: 2.5rem;
+    position: absolute;
+    right: 450px;
+    top:10px;
+}
+
+#dimmed { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    z-index: 300; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+
+/* 주 컨텐즈 영역 */
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 65px;
+}
+.content div#mainbenu{ /*제일 큰 사진*/
+    margin-bottom: 100px;
+}
+.content main{ /*메인 영역*/
+    margin: auto; /*가운데 정렬*/
+    min-width: 1400px; /*폭 고정하려고*/
+    max-width: 1400px;
+}
+main article{ /*위클리 베스트, 먼슬리 베스트 있는 곳*/
+    margin-top: 100px;
+}
+main article .subtitle{ /*제목*/
+    /* background-color: palegreen; */
+    text-align: center; /*가운데 정렬*/
+    font-size: 1.6rem;
+    margin-bottom: 100px;
+}
+main article .closet{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.clothes{
+    width:330px;
+    height: 500px;
+    /* background-color: palevioletred; */
+}
+.clothesImg{ /*옷 이미지*/
+    width: 100%;
+}
+
+
+@media screen and ( max-width: 1620px){
+   #menuWrap.on{
+       right:0;
+       transition: right ease 0.3s;
+   }
+   #nav_menubar{
+       display: inline;
+   }
+   #category > ul{
+       display: none;
+   }
+}
