@@ -4,9 +4,9 @@ from django.contrib.auth.hashers import make_password
 from .models import User
 
 # Create your views here.
-def register(request):
+def Registration(request):
     if request.method == "GET":
-        return render(request, 'register.html')
+        return render(request, "Registration/r.html")
 
     elif request.method == "POST":
         username = request.POST.get['username',None]   #딕셔너리형태
@@ -21,5 +21,5 @@ def register(request):
         else :
             user = User(username=username, password=make_password(password))
             user.save()
-        return render(request, 'register.html', res_data) #register를 요청받으면 register.html 로 응답.
+        return render(request, "Registration/r.html", res_data) #register를 요청받으면 register.html 로 응답.
         
