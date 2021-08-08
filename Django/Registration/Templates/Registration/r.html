@@ -1,3 +1,5 @@
+{% load static %}
+<!DOCTYPE html>
 <html>
     
     <head>
@@ -19,8 +21,10 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
         
-        
-                <div class= "container">
+        <!--            폼 안에다가 입력해줘야한다. (안써주면 에러발생)
+             csrf_token 폼의 경우에는 , 데이터를 서버에 전달하는 기능.이때 암호화된 키를 숨겨놓아 크로스도메인을 막기 위함. -->
+    <!-- bootstrap -component - forms -->
+              <div class= "container">
                 <div class = "row mt-5">
                     {{error}}
                     <div class = "col-12 ">
@@ -29,31 +33,31 @@
                     <form method = "POST" action = ".">  
                     {% csrf_token %} 
     <div class="form-group">
-    <label for="username">사용자 이름</label>
-    <input 
-    type="text" 
-    class="form-control" 
-    id="username" 
-    placeholder="사용자 이름"
-    name="username">   
-    <!-- 이 name 값으로 정보가 전달된다 -->
+      <label for="username">사용자 이름</label>
+      <input 
+      type="text" 
+      class="form-control" 
+      id="username" 
+      placeholder="사용자 이름"
+      name="username">   
+      <!-- 이 name 값으로 정보가 전달된다 -->
     </div>
 
     <div class="form-group">
-    <label for="password">비밀번호</label>
-    <input type="password" 
-    class="form-control"
-    id="password"
+      <label for="password">비밀번호</label>
+      <input type="password" 
+      class="form-control"
+       id="password"
         placeholder="비밀번호"
         name= "password">
     </div>
     
     <div class="form-group">
-    <label for="re_password">비밀번호 확인</label>
-    <input 
-    type= "password" 
-    class="form-control"
-    id="re_password"
+      <label for="re_password">비밀번호 확인</label>
+      <input 
+      type= "password" 
+      class="form-control"
+       id="re_password"
         placeholder="비밀번호 확인"
         name = "re_password">
     </div>
