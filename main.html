@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="main.js"></script>
+    <script defer src="main.js"></script><!-- js파일 -->
     <title>오늘 뭐입지</title>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> <!-- 아이콘 -->
     <!-- <script src="https://kit.fontawesome.com/f5e7b03b5b.js"></script> -->
-    <link rel="stylesheet" href="main_style.css">
+    <link rel="stylesheet" href="main_style.css"> <!-- css파일 -->
 </head>
 
 <body>
     <div class = "container">
-        <nav id="mypage">
+        <nav id="nav_mypage">
             <ul>
                 <li><a href="">로그인</a></li>
                 <li><a href="">회원가입</a></li>
@@ -22,9 +22,9 @@
             </ul>
         </nav>
         <header>
-            <h1 id="logo"><a id="mainLogo" href="">오늘 뭐입지</a></h1>
+            <h1 id="nav_mainlogo"><a href="">오늘 뭐입지</a></h1>
             
-            <nav id="category">
+            <nav id="nav_category">
                 <ul>
                     <li><a href="">BEST</a></li>
                     <li><a href="">NEW</a></li>
@@ -33,30 +33,30 @@
                     <li><a href="">PANTS</a>
                     <li><a href="">SHOES & BAG</a></li>
                 </ul>
-                <span id="nav_menubar"><i class="fas fa-bars"></i></span>
+                <span id="nav_menuBtn"><i class="fas fa-bars"></i></span>
                 <span id="nav_search"><i class="fas fa-search"></i></span>
             </nav>
+            <div id="menubar_overlay">
+                <nav id="menuWrap">
+                    <span id="menubar_x"><i class="fas fa-times"></i></span>
+                    <ul>
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="">장바구니</a></li>
+                        <li><a href="">주문</a></li>
+                        <li><a href="">마이페이지</a></li>
+                        <hr>
+                        <li><a href="">BEST</a></li>
+                        <li><a href="">NEW</a></li>
+                        <li><a href="">CODI</a></li>
+                        <li><a href="">TOP</a></li>
+                        <li><a href="">PANTS</a></li>
+                        <li><a href="">SHOES & BAG</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
         </header>
-
-        <nav id="menuWrap">
-            <span id="navbar_x"><i class="fas fa-times"></i></span>
-            <ul>
-                <li><a href="">로그인</a></li>
-                <li><a href="">회원가입</a></li>
-                <li><a href="">장바구니</a></li>
-                <li><a href="">주문</a></li>
-                <li><a href="">마이페이지</a></li>
-                <hr>
-                <li><a href="">BEST</a></li>
-                <li><a href="">NEW</a></li>
-                <li><a href="">CODI</a></li>
-                <li><a href="">TOP</a></li>
-                <li><a href="">PANTS</a></li>
-                <li><a href="">SHOES & BAG</a></li>
-                
-            </ul>
-        </nav>
-        <!-- <div id="dimmed"></div> -->
 
         <section class="content">
             <div id="mainbenu">
