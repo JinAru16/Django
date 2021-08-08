@@ -32,10 +32,11 @@ urlpatterns = [
     path('Shoes/', include('Shoes.urls')),
     path('Bag/', include('Bag.urls')),
     path('Login/',include('Login.urls')),
-    path('Resistration/', include('Resistration.urls')),
+    path('Registration/', include('Registration.urls')),
     path('ShoppingCart/', include('ShoppingCart.urls')),
     path('Order/', include('Order.urls')),
     path('MyPage/', include('MyPage.urls')),
+    path('LogOut/', include('LogOut.urls')),
 
 
     
