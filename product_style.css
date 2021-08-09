@@ -1,0 +1,215 @@
+@font-face{
+    font-family:'NanumGothic'; /*글꼴*/
+    src: local('NanumGothic'),
+    url('NanumGothic.eot'),
+    url('NanumGothic.woff') format('woff'),
+    url('NanumGothic.ttf') format('truetype');
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#nav_mypage a:hover, #nav_category a:hover{
+    text-decoration: underline;
+}
+ul{
+    padding-left:0;
+}
+li{  
+    list-style: none;
+}
+nav#nav_category li, nav#nav_mypage li{
+    display: inline;
+}
+
+body{
+    margin:0;
+    font-family: 'NanumGothic'; /*글꼴*/
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* 맨 위에 로그인, 장바구니, 마이페이지 있는 곳 */
+#nav_mypage{ 
+    background-color: rgb(182, 182, 182);
+    display: flex;
+    height: 35px; /*높이*/
+    padding-right: 10%;
+    padding-left: 10%;
+    justify-content:flex-end; /*오른쪽 정렬*/
+    align-items: center; /*글들이 가운데 오게하기 위해*/
+}
+#nav_mypage a{
+    margin-right: 50px;
+}
+/* 헤더. 로고랑 카테고리 있는 곳 */
+header{
+    /* background-color: orange; */
+    display: flex;
+    height: 120px;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+#nav_mainlogo{ /*메인 로고*/
+    align-self: center;
+    font-size: 2.5rem;
+    flex-shrink: 0; /*창 줄여도 글 뭉개지지 않도록*/
+}
+#nav_category{ /*카테고리*/
+    /* background-color: gray; */
+    text-align: right; /*오른쪽 정렬*/
+    align-self: flex-end;
+    margin-left: auto;
+    margin-bottom: 30px;
+    flex-grow: 1;
+    font-size: 1.3rem;
+}
+#nav_category > ul{
+    display: inline;
+}
+#nav_category a, #nav_menu, #nav_search{
+    /* background-color: orchid; */
+    margin-left: 50px;
+}
+#nav_menuBtn{
+    align-self: center;
+    font-size: 1.3rem;
+    display: none;
+}
+#nav_search{
+    align-self: center;
+    font-size: 1.3rem;
+}
+#menubar_overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width:100%;
+    height: 100%;
+    right: -100%;
+    top: 0;
+    transition: right ease 0.3s;
+    position: fixed; 
+}
+#menuWrap{
+    background-color: #e6e6e6;
+    position:absolute;
+    width:500px;
+    height:100%;
+    position: fixed; 
+    right: -500px; 
+    top:0;
+    transition: right ease 0.3s; /* 적용할 속성, 진행속도, 총 시간 */
+}
+#menuWrap ul{
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px;
+    /* background-color: blueviolet; */
+    margin: 0;
+}
+#menuWrap li{
+    /* background-color: aqua; */
+    font-size: 1.4rem;
+    width:fit-content;
+}
+#menubar_x{
+    font-size: 2.5rem;
+    position: absolute;
+    right: 450px;
+    top:10px;
+}
+
+
+
+/* 주 컨텐즈 영역 */
+#product_menu{
+    background-color:white;
+    border-bottom: 1px solid black;
+    height: 60px;
+    position:sticky;
+    top: 0;
+}
+#product_menu > ul {
+    /* background-color: darkgrey; */
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-end;
+    padding: 0px 500px;
+}
+#product_menu li{
+    /* background-color: burlywood; */
+    flex-shrink: 0;
+    height: inherit;
+    width:200px;
+    text-align: center;
+    /* text-align:end; */
+    font-size: 1.5rem;
+    /* margin-left: 90px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#product_menu li:hover{
+    background-color: gray;
+}
+
+.product_info{
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    width:1200px;
+    margin:auto;
+}
+.product_detail{
+    text-align: center;
+    padding: 30px;
+    border-bottom: 3px solid black;
+}
+.product_review{
+    padding: 30px;
+    border-bottom: 3px solid black;
+}
+#total_review{
+    background-color: lightgray;
+    height: 180px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.user_reviews{
+    padding:8px 30px;
+}
+.product_qAa{
+    padding: 30px;
+}
+
+/* 폭이 1620 아래가 될 때 */
+@media screen and ( max-width: 1620px){ 
+   #menuWrap.on{
+       right:0;
+       display: block;
+       transition: right ease 0.3s;
+    }
+    #menubar_overlay.on{
+        right: 0;
+        display: block;
+        transition: right ease 0.3s;
+    }
+   #nav_menuBtn{
+       display: inline;
+   }
+   #nav_category > ul{
+       display: none;
+   }
+   #product_menu.on{
+       position: static;
+   }
+}

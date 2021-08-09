@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="product.js"></script><!-- js파일 -->
+    <title>오늘 뭐입지</title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> <!-- 아이콘 -->
+    <!-- <script src="https://kit.fontawesome.com/f5e7b03b5b.js"></script> -->
+    <link rel="stylesheet" href="product_style.css"> <!-- css파일 -->
+</head>
+
+<body>
+    <div class = "container">
+        <nav id="nav_mypage">
+            <ul>
+                <li><a href="">로그인</a></li>
+                <li><a href="">회원가입</a></li>
+                <li><a href="">장바구니<i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="">주문<i class="fas fa-truck"></i></a></li>
+                <li><a href="">마이페이지</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1 id="nav_mainlogo"><a href="">오늘 뭐입지</a></h1>
+            
+            <nav id="nav_category">
+                <ul>
+                    <li><a href="">BEST</a></li>
+                    <li><a href="">NEW</a></li>
+                    <li><a href="">CODI</a></li>
+                    <li><a href="top.html">TOP</a></li>
+                    <li><a href="">PANTS</a>
+                    <li><a href="">SHOES & BAG</a></li>
+                </ul>
+                <span id="nav_menuBtn"><i class="fas fa-bars"></i></span>
+                <span id="nav_search"><i class="fas fa-search"></i></span>
+            </nav>
+            <div id="menubar_overlay">
+                <nav id="menuWrap">
+                    <span id="menubar_x"><i class="fas fa-times"></i></span>
+                    <ul>
+                        <li><a href="">로그인</a></li>
+                        <li><a href="">회원가입</a></li>
+                        <li><a href="">장바구니</a></li>
+                        <li><a href="">주문</a></li>
+                        <li><a href="">마이페이지</a></li>
+                        <hr>
+                        <li><a href="">BEST</a></li>
+                        <li><a href="">NEW</a></li>
+                        <li><a href="">CODI</a></li>
+                        <li><a href="">TOP</a></li>
+                        <li><a href="">PANTS</a></li>
+                        <li><a href="">SHOES & BAG</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="content">
+            <nav id="product_menu">
+                <ul>
+                    <li><a href="#product_detail">상세정보</a></li>
+                    <li><a href="#product_review">리뷰</a></li>
+                    <li><a href="#product_qAa">Q&A</a></li>
+                </ul>
+            </nav>
+
+            <div class="product_info">
+                <!-- 상세정보 -->
+                <div class="product_detail">
+                    <a name="product_detail"><p>상세정보</p></a>
+                    
+                    <img src="product1.jpg">
+                    <img src="product2.jpg">
+                </div>
+
+                <!-- <p>리뷰</p> -->
+                <div class="product_review">
+                    <a name="product_review"></a>
+                    <div id="total_review">
+                        <div>
+                            <p>사용자 총 평점</p>
+                            <p id="total_star" style="text-align: center; font-size: 2rem;">4.8</p>
+                        </div>
+                        <div>
+                            <p>전체 리뷰수</p>
+                            <p id="total_numOfReview" style="text-align: center; font-size: 2rem;">1234</p>
+                        </div>
+                    </div>
+
+                    <div class="user_reviews">
+                        <p class="user_star">별점</p>
+                        <p class="user_id_date">아이디/ 날짜</p>
+                        <p class="user_product">제품 이름</p>
+                        <p class="user_review">리뷰 내용</p>
+                    </div>
+                    <hr>
+                    <div class="user_reviews">
+                        <p class="user_star">별점</p>
+                        <p class="user_id_date">아이디/ 날짜</p>
+                        <p class="user_product">제품 이름</p>
+                        <p class="user_review">리뷰 내용</p>
+                    </div>
+                </div>
+                
+                <!-- 큐엔에이. 지금 당장 필요한 내용은 아닌 것 같아 일단 빈칸으로 냅뒀습니다! -->
+                <div class="product_qAa">
+                    <a name="product_qAa"></a>
+                    <p>Q&A</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <!-- 미정. -->
+        </footer>
+    </div>
+</body>
+</html>
