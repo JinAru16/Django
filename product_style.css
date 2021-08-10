@@ -9,7 +9,7 @@ a{
     text-decoration: none;
     color: black;
 }
-#nav_mypage a:hover, #nav_category a:hover{
+#nav_mypage a:hover, #nav_category a:hover, #menuWrap a:hover{
     text-decoration: underline;
 }
 ul{

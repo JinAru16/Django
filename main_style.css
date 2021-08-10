@@ -5,26 +5,27 @@
     url('NanumGothic.woff') format('woff'),
     url('NanumGothic.ttf') format('truetype');
 }
-a{
+a{ /*a태그의 파랑색밑줄 제거*/
     text-decoration: none;
     color: black;
 }
-a:hover{
+#nav_mypage a:hover, #nav_category a:hover, #menuWrap a:hover{
     text-decoration: underline;
 }
-ul{
+ul{ /*ul태그의 들여쓰기 제거*/
     padding-left:0;
 }
-li{  
+li{ /*li태그의 점 제거*/
     list-style: none;
 }
-nav#nav_category li, nav#nav_mypage li{
-    display: inline;
+nav#nav_category li, nav#nav_mypage li{ 
+    display: inline; /*li태그의 한줄띄기 제거*/
 }
 
 body{
     margin:0;
     font-family: 'NanumGothic'; /*글꼴*/
+    background-color: rgb(243, 243, 243); /*배경색*/
 }
 .container{
     display: flex;
@@ -77,6 +78,8 @@ header{
     align-self: center;
     font-size: 1.3rem;
     display: none;
+    border:none;
+    outline: none;
 }
 #nav_search{
     align-self: center;
