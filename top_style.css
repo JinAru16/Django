@@ -1,0 +1,61 @@
+
+/* 주 컨텐즈 영역 */
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 65px;
+}
+.content div#mainbenu{ /*제일 큰 사진*/
+    margin-bottom: 100px;
+}
+.content main{ /*메인 영역*/
+    margin: auto; /*가운데 정렬*/
+    min-width: 1400px; /*폭 고정하려고*/
+    max-width: 1400px;
+}
+main article{ /*위클리 베스트, 먼슬리 베스트 있는 곳*/
+    margin-top: 100px;
+}
+main article .subtitle{ /*제목*/
+    /* background-color: palegreen; */
+    text-align: center; /*가운데 정렬*/
+    font-size: 1.6rem;
+    margin-bottom: 100px;
+}
+
+main article .best{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+main article .closet{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box{
+    background-color: blanchedalmond;
+    padding: 60px;
+    border-style: none;
+    margin-bottom: 80px;
+}
+
+#array{            
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.bestclothes{
+    width: 380px;
+    height: 550px;
+}
+
+.clothes{
+    width:330px;
+    height: 500px;
+    /* background-color: palevioletred; */
+}
+.clothesImg{ /*옷 이미지*/
+    width: 100%;
+}
