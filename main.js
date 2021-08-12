@@ -1,6 +1,7 @@
 "use strict"
 
 document.addEventListener("DOMContentLoaded", () => {
+    // 메뉴바 클릭했을 때의 동작
     const menuWrap_xButton = document.querySelector("#menubar_x");
     const menu_button = document.querySelector("#nav_menuBtn");
     const menuWrap = document.querySelector("#menuWrap");
@@ -17,11 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("click button2");
     })
     overlay.addEventListener("click", (event) => {
-        if(event.target.contains(menuWrap)){
+        if(event.target.contains(menuWrap)){ //클릭한 곳 밑에 메뉴바가 있다면, 그 오버레이를 클릭한 게 됨. 메뉴바 말고.
             console.log("click button3");
             // console.log(event.target);
             menuWrap.classList.remove("on");
             overlay.classList.remove("on");
         }
     })
+
 })
