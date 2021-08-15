@@ -41,21 +41,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'New', #8
     'Top', #16
-    'Summer_Knit', #15
-    'Dress', #4
-    'Bottom', #3
-    'Shirt_Blouse', #12
-    'Outer', #10
+    'Pants', #3
     'Main', #6
     'Best', #2
-    'Shoes',
-    'Bag', #1
+    'Shoes_and_Bags',
     'Login', #5
     'ShoppingCart', #14
     'Order', #9
     'Registration', #11
     'MyPage', #7
     'LogOut',
+    'Codi',
+    
 
 
 ]

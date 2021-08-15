@@ -19,24 +19,24 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('Best/', include('Best.urls')),
     path('New/', include('New.urls')),
+    path('Codi/', include('Codi.urls')),
     path('Top/', include('Top.urls')),
-    path('Summer_Knit/', include('Summer_Knit.urls')),
-    path('Shirt_Blouse/', include('Shirt_Blouse.urls')),
-    path('Outer/', include('Outer.urls')),
-    path('Bottom/', include('Bottom.urls')),
-    path('Dress/', include('Dress.urls')),
+    path('Pants/', include('Pants.urls')),
+    path('Shoes_and_Bags/', include('Shoes_and_Bags.urls')),
+
+
     path('Main/', include('Main.urls')),
     path('', include('Main.urls')),
-    path('Best/', include('Best.urls')),
-    path('Shoes/', include('Shoes.urls')),
-    path('Bag/', include('Bag.urls')),
     path('Login/',include('Login.urls')),
     path('Registration/', include('Registration.urls')),
     path('ShoppingCart/', include('ShoppingCart.urls')),
     path('Order/', include('Order.urls')),
     path('MyPage/', include('MyPage.urls')),
     path('LogOut/', include('LogOut.urls')),
+    
+
 
 
     
