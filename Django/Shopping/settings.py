@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'Pants', #3
     'Main', #6
     'Best', #2
-    'Shoes_and_Bags',
+    'Shoes_and_Bag',
     'Login', #5
     'ShoppingCart', #14
     'Order', #9
@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'MyPage', #7
     'LogOut',
     'Codi',
-    
+
 
 
 ]

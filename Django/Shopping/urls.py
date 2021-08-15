@@ -24,7 +24,7 @@ urlpatterns = [
     path('Codi/', include('Codi.urls')),
     path('Top/', include('Top.urls')),
     path('Pants/', include('Pants.urls')),
-    path('Shoes_and_Bags/', include('Shoes_and_Bags.urls')),
+    path('Shoes_and_Bag/', include('Shoes_and_Bag.urls')),
 
 
     path('Main/', include('Main.urls')),
