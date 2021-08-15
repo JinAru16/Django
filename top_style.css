@@ -1,7 +1,4 @@
 
-
-
-
 /* 주 컨텐즈 영역 */
 .content{
     display: flex;
@@ -13,11 +10,10 @@
 }
 .content main{ /*메인 영역*/
     margin: auto; /*가운데 정렬*/
-    /* min-width: 1400px; 폭 고정하려고 */
+    min-width: 1400px; /*폭 고정하려고*/
     max-width: 1400px;
 }
-/*위클리 베스트, 먼슬리 베스트 있는 곳*/
-main article{ 
+main article{ /*위클리 베스트, 먼슬리 베스트 있는 곳*/
     margin-top: 100px;
 }
 main article .subtitle{ /*제목*/
@@ -26,12 +22,36 @@ main article .subtitle{ /*제목*/
     font-size: 1.6rem;
     margin-bottom: 100px;
 }
+
+main article .best{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
 main article .closet{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
     display:flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap; /*아이템들의 크기가 폭을 넘어가면 밑으로 넘기려고*/
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-.clothes{ /*옷 이미지와 이름,가격 묶음*/
+
+.box{
+    background-color: blanchedalmond;
+    padding: 60px;
+    border-style: none;
+    margin-bottom: 80px;
+}
+
+#array{            
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.bestclothes{
+    width: 380px;
+    height: 550px;
+}
+
+.clothes{
     width:330px;
     height: 500px;
     /* background-color: palevioletred; */
@@ -39,5 +59,3 @@ main article .closet{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
 .clothesImg{ /*옷 이미지*/
     width: 100%;
 }
-
-
