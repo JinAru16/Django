@@ -39,6 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # about allauth
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+
+
+# 메뉴.
     'New', #8
     'Top', #16
     'Pants', #3
@@ -46,16 +56,17 @@ INSTALLED_APPS = [
     'Best', #2
     'Shoes_and_Bag',
     'Registration',
-    'Login', #5
     'ShoppingCart', #14
     'Order', #9
     'MyPage', #7
-    'LogOut',
     'Codi',
 
 
+    
 
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -140,4 +151,22 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # base_dir은 프로젝트 폴더
 ]
 
+
+
+
+# Auth settings
+
 AUTH_USER_MODEL = 'Registration.User'
+
+AUTHENTICATION_BACKENDS = [
+
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+# Email settings
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
