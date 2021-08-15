@@ -45,10 +45,10 @@ INSTALLED_APPS = [
     'Main', #6
     'Best', #2
     'Shoes_and_Bag',
+    'Registration',
     'Login', #5
     'ShoppingCart', #14
     'Order', #9
-    'Registration', #11
     'MyPage', #7
     'LogOut',
     'Codi',
@@ -129,7 +129,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = False
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -139,3 +139,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # base_dir은 프로젝트 폴더
 ]
+
+AUTH_USER_MODEL = 'Registration.User'

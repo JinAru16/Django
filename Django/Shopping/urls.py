@@ -29,8 +29,8 @@ urlpatterns = [
 
     path('Main/', include('Main.urls')),
     path('', include('Main.urls')),
-    path('Login/',include('Login.urls')),
     path('Registration/', include('Registration.urls')),
+    path('Login/',include('Login.urls')),
     path('ShoppingCart/', include('ShoppingCart.urls')),
     path('Order/', include('Order.urls')),
     path('MyPage/', include('MyPage.urls')),
