@@ -16,15 +16,15 @@
                     <label for="id">아이디</label><br>
                     <input type="text" class="inputBox" id="id">
                 </div>
-                <span class="err_mesg" id="id_err_mesg">아무거나</span>
+                <span class="err_mesg" id="id_err_mesg"></span>
             </div>
-
+            
             <div class="mustInfo">
                 <div id="pwBox">
                     <label for="pw">비밀번호</label><br>
                     <input type="password" class="inputBox" id="pw">
                 </div>
-                <span class="err_mesg">아무거나</span>
+                <span class="err_mesg" id="pw_err_mesg"></span>
             </div>
 
             <div class="mustInfo">
@@ -32,7 +32,7 @@
                     <label for="pw2">비밀번호 확인</label><br>
                     <input type="password" class="inputBox" id="pw2">
                 </div>
-                <span class="err_mesg">아무거나</span>
+                <span class="err_mesg" id="pw2_err_mesg"></span>
             </div>
 
             <div class="mustInfo">
@@ -40,7 +40,7 @@
                     <label for="user_name">이름</label><br>
                     <input type="text" class="inputBox" id="user_name">
                 </div>
-                <span class="err_mesg">아무거나</span>
+                <span class="err_mesg" id="name_err_mesg"></span>
             </div>
 
             <div class="mustInfo">
@@ -48,7 +48,7 @@
                 <div id="birthBoxs">
                     <input type="text" class="birthBox" id="yy" placeholder="년(4자리)" maxlength="4">
                     <select class="birthBox" id="mm" style="width:100px; border-radius: 0px;">
-                        <option>월</option>
+                        <option value="Un">월</option>
                         <option value="01">1</option>
                         <option value="02">2</option>
                         <option value="03">3</option>
@@ -64,7 +64,7 @@
                     </select>
                     <input type="text" class="birthBox" id="dd" placeholder="일" maxlength="2">
                 </div>
-                <span class="err_mesg">아무거나</span>
+                <span class="err_mesg" id="birth_err_mesg"></span>
             </div>
 
             <div class="mustInfo">
