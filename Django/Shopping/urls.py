@@ -20,8 +20,9 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
     path('Main/', include('Main.urls')),
+    path('', include('Main.urls')),
+    path('', include('allauth.urls')),
 
 
     path('Best/', include('Best.urls')),

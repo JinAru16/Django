@@ -68,6 +68,10 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
+ACCOUNT_SIGNUP_REDIRECT_URLS = 'index'
+
+LOGIN_REDIRECT_URL ='index'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
