@@ -62,9 +62,8 @@ input{
     /* border-radius: 5px; */
 }
 .inputBox:focus, .birthBox:focus{
-    outline: none;
-    /* outline-radius: 15px; */
-    box-shadow: 0 0 0px #fff263;
+    outline: 1px solid blue;
+    /* box-shadow: 0 0 0px #fff263; */
 }
 
 #genderBox > input{
