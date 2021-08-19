@@ -15,8 +15,8 @@
     <div class = "container">
         <nav id="mypage">
             <ul>
-                <li><a href="/Login">로그인</a></li>
-                <li><a href="/Resistration">회원가입</a></li>
+                <li><a href="{% url 'account_login' %}">로그인</a></li>
+                <li><a href="{% url 'account_signup' %}">회원가입</a></li>
                 <li><a href="/ShoppingCart">장바구니<i class="fas fa-shopping-cart"></i></a></li>
                 <li><a href="/Order">주문<i class="fas fa-truck"></i></a></li>
                 <li><a href="/MyPage">마이페이지</a></li>

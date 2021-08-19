@@ -68,9 +68,7 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-ACCOUNT_SIGNUP_REDIRECT_URLS = 'index'
 
-LOGIN_REDIRECT_URL ='index'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -170,6 +168,21 @@ AUTHENTICATION_BACKENDS = [
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
+
+
+ACCOUNT_SIGNUP_REDIRECT_URLS = 'index'
+
+LOGIN_REDIRECT_URL ='index'
+
+ACCOUNT_LOGOUT_ON_GET = True
+
+ACCOUNT_AUTHENTICATION_METHODE='email'
+
+ACCOUNT_EMAIL_REQUIRED = True
+
+ACCOUNT_USERNAME_REQUIRED = True
+
+
 
 # Email settings
 

@@ -7,11 +7,8 @@
     {% endif %}
 </navbar>
 
-<h1> 로그인이 성공했을때 띄우는 페이지</h1>
-
-
 {% if user.is_authenticated %}
-        <p>안녕하세요 {{user}}님!</p>
-    {% else %}
-        <p>로그아웃된 상태입ㄴ디ㅏ.</P>
-    {% endif %}
+    <p>안녕하세요 {{user}}님!</p>
+{% else %}
+    <p>로그아웃된 상태입니다.</P>
+{% endif %}
