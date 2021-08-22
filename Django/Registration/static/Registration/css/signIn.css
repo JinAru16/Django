@@ -1,0 +1,84 @@
+@font-face{
+    font-family:'NanumGothic'; /*글꼴*/
+    src: local('NanumGothic'),
+    url('NanumGothic.eot'),
+    url('NanumGothic.woff') format('woff'),
+    url('NanumGothic.ttf') format('truetype');
+}
+body{
+    font-family: 'NanumGothic';
+    margin: 0;
+    background-color: #f6f6f6;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /*가운데 정렬*/
+    padding:100px 0;
+}
+
+#logo{
+    margin: 0px  0px 60px 0px; /*위에서부터 반시계방향*/
+    font-size: 2.5rem;
+}
+
+label{
+    /* background-color: greenyellow; */
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.mustInfo{
+    /* background-color: blueviolet; */
+    margin: 30px 0 40px 0;
+}
+
+.inputBox{ /*입력창*/
+    width: 400px;
+    height: 45px;
+    background: #FFFFFF;
+    border: 1px solid #6B6B6B;
+    /* border-radius: 5px; */
+}
+
+#birthBoxs{ /*생년월일 입력창들*/
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.birthBox#yy, .birthBox#dd{
+    width: 120px;
+    height: 45px;
+    background: #FFFFFF;
+    border: 1px solid #6B6B6B;
+    /* border-radius: 5px; */
+}
+
+.inputBox:focus, .birthBox:focus{
+    outline: 1px solid blue;
+    /* box-shadow: 0 0 0px #fff263; */
+}
+
+#genderBox > input{
+    margin-left:10%;
+}
+
+#joinBtn{
+    background: #bdc9f0;
+    border: 1px solid #bdc9f0;
+    /* border-radius: 5px; */
+    width: 400px;
+    height: 50px;
+    font-size: 1.3rem;
+    /* letter-spacing: 8px; */
+}
+
+.err_mesg{
+    color: red;
+    font-size: 0.8rem;
+    display: none;
+}

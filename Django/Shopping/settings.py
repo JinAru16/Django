@@ -39,7 +39,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+    # 메뉴.
+    'New', #8
+    'Top', #16
+    'Pants', #3
+    'Main', #6
+    'Best', #2
+    'Shoes_and_Bag',
+    'Registration', 
+    'ShoppingCart', #14
+    'Order', #9
+    'MyPage', #7
+    'Codi',
+
+
     # about allauth
     'django.contrib.sites',
     'allauth',
@@ -48,18 +61,7 @@ INSTALLED_APPS = [
 
 
 
-# 메뉴.
-    'New', #8
-    'Top', #16
-    'Pants', #3
-    'Main', #6
-    'Best', #2
-    'Shoes_and_Bag',
-    'Registration',
-    'ShoppingCart', #14
-    'Order', #9
-    'MyPage', #7
-    'Codi',
+
 
 
     

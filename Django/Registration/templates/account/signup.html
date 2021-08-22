@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Registration/signIn.css">
+    <script defer src="Registration/signIn.js"></script>
+    <title>이날 뭐입지</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="logo">이<spna style="color: #8FAADC;">날</spna> 뭐입지</h1>
+        <!-- method="POST" -->
+        <form  action=""> <!--여기에 method랑 action 입력해주셔야 할 듯 합니다.-->
+            <!-- 아이디 -->
+            <div class="mustInfo">
+                <div id="nameBox">
+                    <label for="user_name">아이디</label><br>
+                    <input type="text" class="inputBox" id="user_name">
+                </div>
+                <span class="err_mesg" id="name_err_mesg"></span>
+            </div>
+            <!-- 비밀번호 -->
+            <div class="mustInfo">
+                <div id="pwBox">
+                    <label for="pw">비밀번호</label><br>
+                    <input type="password" class="inputBox" id="pw">
+                </div>
+                <span class="err_mesg" id="pw_err_mesg"></span>
+            </div>
+            <!-- 비밀번호 확인 -->
+            <div class="mustInfo">
+                <div id="pw2Box">
+                    <label for="pw2">비밀번호 확인</label><br>
+                    <input type="password" class="inputBox" id="pw2">
+                </div>
+                <span class="err_mesg" id="pw2_err_mesg"></span>
+            </div>
+            <!-- 이름 -->
+            <div class="mustInfo">
+            <div id="idBox">
+                    <label for="id">이름</label><br>
+                    <input type="text" class="inputBox" id="id">
+                </div>
+                <span class="err_mesg" id="id_err_mesg"></span>
+                
+            </div>
+            <!-- 생년월일 -->
+            <div class="mustInfo">
+                <label for="birth" >생년월일</label><br>
+                <div id="birthBoxs">
+                    <input type="text" class="birthBox" id="yy" placeholder="년(4자리)" maxlength="4">
+                    <select class="birthBox" id="mm" style="width:120px; border-radius: 0px;">
+                        <option value="Un">월</option>
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                        <option value=5>5</option>
+                        <option value=6>6</option>
+                        <option value=7>7</option>
+                        <option value=8>8</option>
+                        <option value=9>9</option>
+                        <option value=10>10</option>
+                        <option value=11>11</option>
+                        <option value=12>12</option>
+                    </select>
+                    <input type="text" class="birthBox" id="dd" placeholder="일" maxlength="2">
+                </div>
+                <span class="err_mesg" id="birth_err_mesg"></span>
+            </div>
+            <!-- 성별 -->
+            <div class="mustInfo">
+                <div id="genderBox">
+                    <label for="gender">성별</label>
+                    <input type="radio" name="gender" value="F"> 여
+                    <input type="radio" name="gender" value="M"> 남
+                    <input type="radio" name="gender" value="U" checked> 선택 안함
+                </div>
+            </div>
+            
+            <button id="joinBtn">가입하기</button>
+        </form>
+    </div>
+</body>
+</html>
