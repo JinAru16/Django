@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 def index(request):
     print(request.user)
-    return render(request, 'Registration/signup.html')
+    return render(request, 'Registration/look.html')
