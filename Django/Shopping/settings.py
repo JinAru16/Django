@@ -184,6 +184,8 @@ ACCOUNT_EMAIL_REQUIRED = True
 
 ACCOUNT_USERNAME_REQUIRED = True
 
+ACCOUNT_SIGNUP_FORM_CLASS = 'Registration.forms.SignupForms'
+
 
 
 # Email settings
