@@ -101,89 +101,89 @@ function checkName (userName) //얘만 userName 없다고 그러네..
 }
 
 
-function checkYear (yy)
-{
-    const value = this.value || yy.value;
-    const birthErrMesg = document.querySelector("#birth_err_mesg");
+// function checkYear (yy)
+// {
+//     const value = this.value || yy.value;
+//     const birthErrMesg = document.querySelector("#birth_err_mesg");
 
-    if(!value){ //미입력.
-        console.log("yy: empty");
-        birthErrMesg.style.display = "block";
-        birthErrMesg.textContent = "년도를 입력하세요.";
-        return false;
-    }
-    else{
-        console.log("yy: ok");
-        birthErrMesg.style.display = "none";
-        return true;
-    }
-}
+//     if(!value){ //미입력.
+//         console.log("yy: empty");
+//         birthErrMesg.style.display = "block";
+//         birthErrMesg.textContent = "년도를 입력하세요.";
+//         return false;
+//     }
+//     else{
+//         console.log("yy: ok");
+//         birthErrMesg.style.display = "none";
+//         return true;
+//     }
+// }
 
-function checkMonth (mm)
-{
-    const value = this.value || mm.value;
+// function checkMonth (mm)
+// {
+//     const value = this.value || mm.value;
 
-    const birthErrMesg = document.querySelector("#birth_err_mesg");
-    console.log(value);
+//     const birthErrMesg = document.querySelector("#birth_err_mesg");
+//     console.log(value);
 
-    if(value === "Un"){ //미입력.
-        console.log("mm: empty");
-        birthErrMesg.style.display = "block";
-        birthErrMesg.textContent = "월을 입력하세요.";
-        return false;
-    }
-    else{
-        console.log("mm: ok");
-        birthErrMesg.style.display = "none";
-        return true;
-    }
-}
+//     if(value === "Un"){ //미입력.
+//         console.log("mm: empty");
+//         birthErrMesg.style.display = "block";
+//         birthErrMesg.textContent = "월을 입력하세요.";
+//         return false;
+//     }
+//     else{
+//         console.log("mm: ok");
+//         birthErrMesg.style.display = "none";
+//         return true;
+//     }
+// }
 
-function checkDay (dd)
-{
-    const value = this.value || dd.value;
-    const birthErrMesg = document.querySelector("#birth_err_mesg");
-    const calender = [0,31,28,31,30,31,30,31,31,30,31,30,31];
-    console.log(mm.value);
+// function checkDay (dd)
+// {
+//     const value = this.value || dd.value;
+//     const birthErrMesg = document.querySelector("#birth_err_mesg");
+//     const calender = [0,31,28,31,30,31,30,31,31,30,31,30,31];
+//     console.log(mm.value);
 
-    if(!value){ //미입력.
-        console.log("dd: empty");
-        birthErrMesg.style.display = "block";
-        birthErrMesg.textContent = "일을 입력하세요.";
-        return false;
-    }
-    else if(checkMonth(mm) && checkYear(yy)){ //월과 년이 입력되어있다면, 날짜가 범위에 맞는지 확인.
-        // console.log("진입");
-        if(value < 0 || calender[mm.value] < value){ //날짜 제대로 입력했는지 확인
-            const isyeap = (yy.value % 4 == 0 && yy.value % 100 != 0) || yy.value % 400 == 0;
-            if(!(isyeap && value === 29)){ //윤년의 29일이었는지 확인
-                console.log("dd2: out of");
-                birthErrMesg.style.display = "block";
-                birthErrMesg.textContent = "일을 다시 확인해주세요.";
-                return false;
-            }
-        }
-        else{
-            console.log("dd2: ok");
-            birthErrMesg.style.display = "none";
-            return true;
-        }
-    }
-    else{
-        console.log("dd: ok");
-        birthErrMesg.style.display = "none";
-        return true;
-    }
-}
+//     if(!value){ //미입력.
+//         console.log("dd: empty");
+//         birthErrMesg.style.display = "block";
+//         birthErrMesg.textContent = "일을 입력하세요.";
+//         return false;
+//     }
+//     else if(checkMonth(mm) && checkYear(yy)){ //월과 년이 입력되어있다면, 날짜가 범위에 맞는지 확인.
+//         // console.log("진입");
+//         if(value < 0 || calender[mm.value] < value){ //날짜 제대로 입력했는지 확인
+//             const isyeap = (yy.value % 4 == 0 && yy.value % 100 != 0) || yy.value % 400 == 0;
+//             if(!(isyeap && value === 29)){ //윤년의 29일이었는지 확인
+//                 console.log("dd2: out of");
+//                 birthErrMesg.style.display = "block";
+//                 birthErrMesg.textContent = "일을 다시 확인해주세요.";
+//                 return false;
+//             }
+//         }
+//         else{
+//             console.log("dd2: ok");
+//             birthErrMesg.style.display = "none";
+//             return true;
+//         }
+//     }
+//     else{
+//         console.log("dd: ok");
+//         birthErrMesg.style.display = "none";
+//         return true;
+//     }
+// }
 
 
 const id = document.querySelector("#id");
 const pw = document.querySelector("#pw");
 const pw2 = document.querySelector("#pw2");
 const userName = document.querySelector("#user_name");
-const yy = document.querySelector("#yy");
-const mm = document.querySelector("#mm");
-const dd = document.querySelector("#dd");
+// const yy = document.querySelector("#yy");
+// const mm = document.querySelector("#mm");
+// const dd = document.querySelector("#dd");
 
 document.addEventListener("DOMContentLoaded", () => {
     //아이디
@@ -197,15 +197,15 @@ document.addEventListener("DOMContentLoaded", () => {
     userName.addEventListener("blur", checkName);
 
     //생년월일    
-    yy.addEventListener("blur", checkYear);
-    mm.addEventListener("blur", checkMonth);
-    dd.addEventListener("blur", checkDay);
+    // yy.addEventListener("blur", checkYear);
+    // mm.addEventListener("blur", checkMonth);
+    // dd.addEventListener("blur", checkDay);
 
     //가입하기 버튼 눌렀을 때 최종확인.
     const joinBtn = document.querySelector("#joinBtn")
     joinBtn.addEventListener("click", () => {
-        const check = checkId(id) && checkPw(pw) && checkPw2(pw2) && checkName(userName) && 
-            checkYear(yy) && checkMonth(mm) && checkDay(dd, mm, yy);
+        const check = checkId(id) && checkPw(pw) && checkPw2(pw2) && checkName(userName); 
+        // && checkYear(yy) && checkMonth(mm) && checkDay(dd, mm, yy);
 
         if(check){
             joinBtn.disabled=false;

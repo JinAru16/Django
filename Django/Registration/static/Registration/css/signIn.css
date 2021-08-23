@@ -45,26 +45,26 @@ label{
 }
 
 #birthBoxs{ /*생년월일 입력창들*/
-    width: 400px;
+    /* width: 400px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 .birthBox#yy, .birthBox#dd{
-    width: 120px;
+    /* width: 120px;
     height: 45px;
     background: #FFFFFF;
-    border: 1px solid #6B6B6B;
-    /* border-radius: 5px; */
+    border: 1px solid #6B6B6B; */
+    /* border-radius: 5px; */ /*주석*/
 }
 
-.inputBox:focus, .birthBox:focus{
+.inputBox:focus{ /*, .birthBox:focus*/
     outline: 1px solid blue;
     /* box-shadow: 0 0 0px #fff263; */
 }
 
 #genderBox > input{
-    margin-left:10%;
+    /* margin-left:10%; */
 }
 
 #joinBtn{
