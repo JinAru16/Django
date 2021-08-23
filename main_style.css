@@ -1,5 +1,67 @@
+/* 메인베너 슬라이드 이미지 */
+#mainbenu__overlay{
+    /* background-color: antiquewhite; */
+    width:1903px;
+    height:750px;
+    position: relative;
+    overflow: hidden;
+}
+.mainbenu__imgList{
+    display: flex;
+    position:absolute;
+    top:0;
+    left:0;
+    transition: left ease 0.3s;
+}
+.mainbenu__img{
+    /* background-color: yellow; */
+    width:1903px;
+    height:750px;
+}
+.mainbenu__tempImg{
+    width:fit-content;
+    height: fit-content;
+}
 
+/* 메인베너 슬라이드 이미지 화살표버튼 */
+.mainbenu__direc{
+    font-size: 2rem;
+    color: rgba(82, 82, 82, 0.596);
+    cursor: pointer;
+    position:absolute;
+    display: inline;
+}
+.mainbenu__direc#back{
+    /* background-color: blue; */
+    top: 50%;
+}
+.mainbenu__direc#front{
+    /* background-color: blue; */
+    top: 50%;
+    right: 0;
+}
 
+/* 메인베너 슬라이드 이미지 밑에 점 */
+.mainbenu__dotList{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+}
+.mainbenu__dot{
+    background-color: rgba(172, 172, 172, 0.493);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 0 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+.active, .mainbenu__dot:hover{
+    background-color: rgb(138, 138, 138);
+}
 
 
 /* 주 컨텐즈 영역 */

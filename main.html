@@ -63,7 +63,25 @@
 
         <section class="content">
             <div id="mainbenu">
-                <img width="100%" src="mainbenu1.jpg"> <!-- 메인 베너 이미지 -->
+                <div id="mainbenu__overlay">
+                    <div class="mainbenu__imgList"> <!--리스트로 만들기.-->
+                        <span id="tempBack" class="mainbenu__tempImg"></span>
+                        <img id=1 class="mainbenu__img" src="mainbenu1.jpg"> <!-- 메인 베너 이미지 -->
+                        <img id=2 class="mainbenu__img" src="mainbenu2.jpg"> <!-- 메인 베너 이미지 -->
+                        <img id=3 class="mainbenu__img" src="mainbenu3.jpg">
+                        <span id="tempFront" class="mainbenu__tempImg"></span>
+                    </div>
+
+                    <div class="mainbenu__directionKeys">
+                        <span id="back" class="mainbenu__direc" onclick="nextSlide(-1)"><i class="fas fa-chevron-left"></i></span>
+                        <span id="front" class="mainbenu__direc" onclick="nextSlide(1)"><i class="fas fa-chevron-right"></i></span>
+                    </div>
+                    <div class="mainbenu__dotList">
+                        <span id=1 class="mainbenu__dot" ></span>
+                        <span id=2 class="mainbenu__dot"></span>
+                        <span id=3 class="mainbenu__dot"></span>
+                    </div>
+                </div>
             </div>
 
             <!-- 메인 컨텐트 영역 -->
