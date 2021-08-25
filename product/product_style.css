@@ -42,11 +42,13 @@
     padding: 30px;
     border-bottom: 3px solid black;
 }
+
 /* 상품 리뷰 */
 .product_review{
     padding: 30px;
     border-bottom: 3px solid black;
 }
+/* 상품 전체 리뷰평균 */
 #total_review{
     background-color: var(--basic-gray-color);
     height: 180px;
@@ -54,9 +56,19 @@
     justify-content: space-evenly;
     align-items: center;
 }
-.user_reviews{
-    padding:8px 30px;
+.review__total{
+    text-align: center; 
+    font-size: 2rem;
 }
+/* 구매자별 리뷰 */
+.review__unit{
+    padding:8px 50px;
+}
+.review__star{
+    color: red;
+}
+
+/* 상품 큐엔에이 */
 .product_qAa{
     padding: 30px;
 }
