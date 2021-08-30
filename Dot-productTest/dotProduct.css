@@ -1,0 +1,63 @@
+.effectCloth__dotCloth{
+    position: relative;
+    background-color: aquamarine;
+    width: 755px;
+    height: 797px;
+    /* margin: 0 0; */
+}
+.effectCloth__dotIn{
+    background-color: rgb(255, 11, 11);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    /* display: inline-block; */
+    cursor: pointer;
+    position:absolute;
+}
+.effectCloth__dotIn#dot1{
+    top: 43%;
+    left: 55%;
+}
+.effectCloth__dotIn#dot2{
+    top: 67%;
+    left: 45%;
+}
+.effectCloth__dotIn#dot3{
+    top: 87%;
+    left: 33%;
+}
+.effectCloth__dotIn:hover{
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+.effectCloth__dotOut:hover > .effectCloth__info{
+    display: inline;
+    /* background-color: blue; */
+}
+
+.effectCloth__info{
+    background-color: azure;
+    position:absolute;
+    padding: 2px 12px;
+    display: none;
+}
+.effectCloth__info#info1{
+    top: 38%;
+    left: 60%;
+}
+.effectCloth__info#info2{
+    top: 62%;
+    left: 50%;
+}
+.effectCloth__info#info3{
+    top: 82%;
+    left: 38%;
+}
+
+
+p{
+    margin: 0;
+}
