@@ -4,19 +4,20 @@
     width:1903px;
     height:750px;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /*이러면 이 크기를 넘어서서 있는 것들을 숨김*/
+    z-index: 1; /*맨앞으로 보내기같은거. 숫자가 클수록 위에있음.*/
 }
 .mainbenu__imgList{
-    display: flex;
-    position:absolute;
+    display: flex; /*flex로 해야 이미지들이 알아서 옆으로 나열됨.*/
+    position:absolute; /*그래야 맨 첫번째 이미지부터 보이게 할 수 있음.*/
     top:0;
     left:0;
     transition: left ease 0.3s;
 }
 .mainbenu__img{
     /* background-color: yellow; */
-    width:1903px;
-    height:750px;
+    width:inherit;
+    height:inherit;
 }
 .mainbenu__tempImg{
     width:fit-content;
@@ -34,11 +35,13 @@
 .mainbenu__direc#back{
     /* background-color: blue; */
     top: 50%;
+    margin-left: 20px;
 }
 .mainbenu__direc#front{
     /* background-color: blue; */
     top: 50%;
     right: 0;
+    margin-right: 20px;
 }
 
 /* 메인베너 슬라이드 이미지 밑에 점 */
@@ -76,30 +79,38 @@
 .content main{ /*메인 영역*/
     margin: auto; /*가운데 정렬*/
     /* min-width: 1400px; 폭 고정하려고 */
-    max-width: 1400px;
+    /* max-width: 1400px; */
 }
 /*위클리 베스트, 먼슬리 베스트 있는 곳*/
-main article{ 
+main .bestProduct{ 
     margin-top: 100px;
+    max-width: 1400px;
 }
-main article .subtitle{ /*제목*/
+.bestProduct__subtitle{ /*제목*/
     /* background-color: palegreen; */
     text-align: center; /*가운데 정렬*/
     font-size: 1.6rem;
     margin-bottom: 100px;
 }
-main article .closet{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
+.bestProduct__bundle{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
+    /* background-color: cadetblue; */
     display:flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap; /*아이템들의 크기가 폭을 넘어가면 밑으로 넘기려고*/
+    justify-content: space-around;
 }
-.clothes{ /*옷 이미지와 이름,가격 묶음*/
-    width:330px;
-    height: 500px;
+.bestProduct__cloth{ /*옷 이미지와 이름,가격 묶음*/
+    max-width:330px;
+    max-height: 400px;
+    margin: 0 5px;
     /* background-color: palevioletred; */
 }
 .clothesImg{ /*옷 이미지*/
     width: 100%;
 }
-
+.bestProduct__viewAll{
+    /* background-color: cyan; */
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: blue;
+}
 

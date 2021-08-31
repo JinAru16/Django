@@ -72,26 +72,3 @@
 .product_qAa{
     padding: 30px;
 }
-
-/* 폭이 1620 아래가 될 때 */
-@media screen and ( max-width: 1620px){ 
-   #menuWrap.on{
-       right:0;
-       display: block;
-       transition: right ease 0.3s;
-    }
-    #menubar_overlay.on{
-        right: 0;
-        display: block;
-        transition: right ease 0.3s;
-    }
-   #nav_menuBtn{
-       display: inline;
-   }
-   #nav_category > ul{
-       display: none;
-   }
-   #product_menu.on{
-       position: static;
-   }
-}
