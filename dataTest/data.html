@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이날 뭐입지</title>
+    <script>
+        const xml = new XMLHttpRequest();
+        const root = document.querySelector("#root");
+
+        xml.onreadystatechange = function() {
+            if(xml.readyState == XMLHttpRequest.DONE){
+                if(xml.status == 200){
+                    let data = xml.responseText;
+                    // let data = JSON.parse(xml.responseText);
+                    root.textContent = data;
+                }
+            }
+            sdf
+        }
+
+        xml.open("GET", "url", true);
+        xml.send();
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
