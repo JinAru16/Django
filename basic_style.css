@@ -82,14 +82,17 @@ header{
     margin-left: 50px;
 }
 #nav_menuBtn{
+    cursor: pointer;
     align-self: center;
     font-size: 1.3rem;
     display: none; /*창 크기가 줄었을 때만 보이도록 하기 위해*/
 }
 #nav_search{
+    cursor: pointer;
     align-self: center;
     font-size: 1.3rem;
 }
+
 /* 메뉴바 */
 #menubar_overlay{
     background-color: rgba(0, 0, 0, 0.5); /*불투명도*/
@@ -100,6 +103,7 @@ header{
     top: 0;
     transition: right ease 0.3s; /*움직임에 효과(시간적 차)를 주기 위해*/
     position: fixed; /*이거 안하면 얘 있는데까지 스크롤이 되더라*/
+    z-index: 2;
 }
 #menuWrap{
     background-color: var(--basic-gray-color);
@@ -131,6 +135,7 @@ header{
     position: absolute;
     right: 450px;
     top:10px;
+    cursor: pointer;
 }
 
 /* 폭이 1620 아래가 될 때 메뉴바 */
