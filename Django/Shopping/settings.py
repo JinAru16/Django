@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+
     # 메뉴.
     'New', #8
     'Top', #16
@@ -52,19 +54,14 @@ INSTALLED_APPS = [
     'MyPage', #7
     'Codi',
 
-
     # about allauth
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
 
-
-
-
-
-
-    
+    # 위젯
+    'widget_tweaks',
 
 ]
 
@@ -180,7 +177,7 @@ ACCOUNT_LOGOUT_ON_GET = True
 
 ACCOUNT_AUTHENTICATION_METHODE='email'
 
-ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_REQUIRED = False
 
 ACCOUNT_SIGNUP_FORM_CLASS = 'Registration.forms.SignupForm'
 

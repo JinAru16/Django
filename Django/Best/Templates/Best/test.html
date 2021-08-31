@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+  $('#btn').click(function(){
+   $.ajax({
+    url : 'Best/test.html',
+    data : {name:'name1', age:'27'},
+    success:function(data){
+        $('body').append(data)
+    }
+   });
+  });
+ });
+</script>
+ <input type="button" value="클릭" id="btn">
+ <body>
+</html>
