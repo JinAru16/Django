@@ -1,0 +1,30 @@
+{% extends "Registration/base.html" %}
+
+{% load static %}
+
+{% block header %}
+<header class="site-header navbar">
+    <div class="mustInfo">
+    <nav>
+        <ul class="navbar">
+            {% if user.is_authenticated %}
+            <li><a href="#">로그아웃</a></li>
+        {% else %}
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        {% endif %}
+        /ul>
+    </nav>
+
+ {% endblock header %}
+
+{% block footer %}
+<footer class="site-footer">
+  <div class="max-content-width content">
+    <div></div>
+    <div>이날뭐입지</div>
+  </div>
+</footer>
+
+{% endblock footer %}
+지
