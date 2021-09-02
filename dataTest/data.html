@@ -4,22 +4,63 @@
     <meta charset="UTF-8">
     <title>이날 뭐입지</title>
     <script>
-        const xml = new XMLHttpRequest();
-        const root = document.querySelector("#root");
+        //ajax. xmlhttprequest 방법.
 
-        xml.onreadystatechange = function() {
-            if(xml.readyState == XMLHttpRequest.DONE){
-                if(xml.status == 200){
-                    let data = xml.responseText;
-                    // let data = JSON.parse(xml.responseText);
-                    root.textContent = data;
+        document.addEventListener("DOMContentLoaded", () => {
+            const xml = new XMLHttpRequest();
+            const root = document.querySelector("#root");
+
+            xml.onreadystatechange = function() {
+                if(xml.readyState == XMLHttpRequest.DONE){
+                    if(xml.status == 200){
+                        // let data = xml.responseText;
+                        let data = JSON.parse(xml.responseText); //데이터를 JSON형식으로 바꿈.
+                        console.log(data);
+                        root.textContent = data.squadName;
+                    }
                 }
             }
-            sdf
-        }
+            xml.open("GET", "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json", true); // !! url과 get 바꿔주세요.
+            xml.send();
+        })
+        
 
-        xml.open("GET", "url", true);
-        xml.send();
+        //궁금한 것들.
+
+        //1. XMLHttpRequest
+        //XHR은 오브젝트로, 서버와 통신(interact)하기 위해 사용됨.
+        //페이지 새로고침 없이 url로 데이터를 얻어올 수 있음.
+        //AJAX 프로그래밍에 많이 쓰임.
+        //xml형식뿐만 아니라 다른 데이터 형식으로도 받아올 수 있음.
+
+        //2. XMLHttpRequest.onreadystatechange
+        //이벤트 핸들러(=이벤트가 발생했을 때 실행하는 함수). readyState가 바뀔때마다 호출됨.
+
+        //3. XMLHttpRequest.responseText
+        //받은 데이터를 텍스트 타입으로 변환해 반환함. 실패하면 null 반환.
+
+        //4. XMLHttpRequest.readyState
+        //ajax통신의 진행중인 상태(state)를숫자 반환함.
+        //0: 초기화되지 않은 상태(open메소드가 아직 호출되지 않은 상태)
+        //1: open메소드가 호출된 상태(send메소드느 호출x)
+        //2: 송신완료, 요청을 시작한 상태 (?)
+        //3: 수신중인 상태(데이터가 들어오고 있는 상태)
+        //4: 수신 완료(데이터 모두 받은 상태)
+
+        //5. XMLHttpRequest.status 
+        //데이터 수신의 성공 여부를 숫자로 반환.
+        //0: 로컬로 접근 성공
+        //200: 해당 url로 접근 성공
+        //400: 접근 거부
+        //404: 해당 url 없음
+        //500: 서버오류
+
+        //send()
+        //데이터 교환을 요청하는 함수.
+
+        //open(GET 또는 POST, url, async)
+        //서버와 데이터를 교환할 때 필요한 정보 입력.
+        //동기로 진행시 onreadystatechange함수 필요 없이 send함수 뒤에 나오는 script코드를 응답이 오면 동작.
     </script>
 </head>
 <body>
