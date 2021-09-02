@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="main.js"></script><!-- js파일 -->
     <title>이날 뭐입지</title>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> <!-- 아이콘 -->
     <!-- <script src="https://kit.fontawesome.com/f5e7b03b5b.js"></script> -->
+    <script defer src="main-slide.js"></script><!-- js파일 -->
+    <script defer src="main-clothData.js"></script>
+    <script defer src="../basicJS.js"></script>
     <link rel="stylesheet" href="main_style.css"> <!-- css파일 -->
-    <link rel="stylesheet" href="..\basic_style.css">
+    <link rel="stylesheet" href="../basic_style.css">
 </head>
 
 <body>
@@ -38,9 +40,9 @@
                 <span id="nav_menuBtn"><i class="fas fa-bars"></i></span>
                 <span id="nav_search"><i class="fas fa-search"></i></span>
             </nav>
+
             <!-- 메뉴바 -->
-            
-            <div id="menubar_overlay">
+            <div id="menubar_overlay"> 
                 <nav id="menuWrap">
                     <span id="menubar_x"><i class="fas fa-times"></i></span>
                     <ul>
@@ -62,13 +64,14 @@
         </header>
 
         <section class="content">
+            <!--메인 베너 이미지-->
             <div id="mainbenu">
-                <div id="mainbenu__overlay">
-                    <div class="mainbenu__imgList"> <!--리스트로 만들기.-->
+                <div id="mainbenu__overlay"> <!--오버레이. 이 오버레이의 크기만큼만 보임.-->
+                    <div class="mainbenu__imgList"> <!--이미지 리스트-->
                         <span id="tempBack" class="mainbenu__tempImg"></span>
-                        <img class="mainbenu__img" src="..\img\mainbenu1.jpg"> <!-- 메인 베너 이미지 -->
-                        <img class="mainbenu__img" src="..\img\mainbenu2.jpg"> <!-- 메인 베너 이미지 -->
-                        <img class="mainbenu__img" src="..\img\mainbenu3.jpg">
+                        <img class="mainbenu__img" src="../img/mainbenu1.jpg"> <!-- 메인 베너 이미지 -->
+                        <img class="mainbenu__img" src="../img/mainbenu2.jpg"> <!-- 메인 베너 이미지 -->
+                        <img class="mainbenu__img" src="../img/mainbenu3.jpg"> <!-- 메인 베너 이미지 -->
                         <span id="tempFront" class="mainbenu__tempImg"></span>
                     </div>
 
@@ -87,67 +90,33 @@
             <!-- 메인 컨텐트 영역 -->
             <main>
                 <!-- 위클리 베스트 -->
-                <article>
-                    <h3 class="subtitle">#WEEKLY BEST</h3>
-                    <div class="closet">
-                        <div class="clothes">
-                            <a><img class = "clothesImg" src="..\img\clothes1.jpg"></a>
-                            <p><a href="product-detail.html">썸머 쿨 아리랑</a></p>
-                            <p>15000</p>
-                        </div>
-                        <div class="clothes">
-                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
-                            <p><a>썸머 쿨 아리랑</a></p>
-                            <p>15000</p>
-                        </div>
-                        <div class="clothes">
-                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
-                            <p><a>썸머 쿨 아리랑</a></p>
-                            <p>15000</p>
-                        </div>
-                        <div class="clothes">
-                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
-                            <p><a>썸머 쿨 아리랑</a></p>
-                            <p>15000</p>
-                        </div>
-                        <div class="clothes">
-                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
-                            <p><a>썸머 쿨 아리랑</a></p>
-                            <p>15000</p>
-                        </div>
-                        <div class="clothes">
-                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
-                            <p><a>썸머 쿨 아리랑</a></p>
-                            <p>15000</p>
-                        </div>
-                        <div class="clothes">
-                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
-                            <p><a>썸머 쿨 아리랑</a></p>
-                            <p>15000</p>
-                        </div>
-                        <div class="clothes">
-                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
-                            <p><a>썸머 쿨 아리랑</a></p>
-                            <p>15000</p>
-                        </div>
+                <article class="bestProduct">
+                    <h3 class="bestProduct__subtitle">#WEEKLY BEST</h3>
+                    <div id="bestProduct__weekly" class="bestProduct__bundle">
+                        <!-- <div class="bestProduct__cloth" >
+                            <a href="../product/product-detail.html">
+                                <img class = "clothesImg" src="..\img\clothes1.jpg">
+                                <div>썸머 쿨 아리랑</div>
+                                <div>15000</div>
+                            </a>
+                        </div> -->
                     </div>
+                    <a><span class="bestProduct__viewAll"><i class="fas fa-chevron-right"></i> 전체보기</span></a>
                 </article>
                 
                 <!-- 먼슬리 베스트 -->
-                <article>
-                    <h3 class="subtitle">#MONTHLY BEST</h3>
-                    <div class="closet">
-                        <div class="clothes">
-                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
-                            <p><a>썸머 쿨 아리랑</a></p>
-                            <p>15000</p>
-                        </div>
-                        <div class="clothes">
-                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
-                            <p><a>썸머 쿨 아리랑</a></p>
-                            <p>15000</p>
-                        </div>
+                <article class="bestProduct">
+                    <h3 class="bestProduct__subtitle">#MONTHLY BEST</h3>
+                    <div id="bestProduct__monthly" class="bestProduct__bundle">
+                        <!-- <div class="bestProduct__cloth">
+                            <a href="../product/product-detail.html">
+                                <img class = "clothesImg" src="..\img\clothes1.jpg">
+                                <div>썸머 쿨 아리랑</div>
+                                <div>15000</div>
+                            </a>
+                        </div> -->
                     </div>
+                    <a><span class="bestProduct__viewAll"><i class="fas fa-chevron-right"></i> 전체보기</span></a>
                 </article>
             </main>
         </section>
