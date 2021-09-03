@@ -4,9 +4,12 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Registration/signIn.css">
-    <script defer src="Registration/signIn.js"></script>
-    <title>{% block title %}Coplate{% endblock title %}</title>
+    <!--                   content에 대한 내용은 base_yet(코드잇 강좌에서 따온 파일)에서 가져온겁니다. 추후에 다른내용에 들어야하면 수정해주세요-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{% static 'Registration/signIn.css' %} ">
+    <script type="text/javascript" src="{% static 'Registration/signIn.js' %}"></script>
+  
+    <title>{% block title %}이날뭐입지{% endblock title %}</title>
 </head>
   <body>
     {% block header %}{% endblock header %}

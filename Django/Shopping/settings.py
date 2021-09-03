@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'Order', #9
     'MyPage', #7
     'Codi',
+    'widget_tweaks'
 
 
     # about allauth

@@ -1,21 +1,26 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="Registration/signIn.css">
-    <script defer src="Registration/signIn.js"></script>
-    <title>이날 뭐입지</title>
-</head>
-<body>
-    <div class="container">
-        <h1 id="logo">이<spna style="color: #8FAADC;">날</spna> 뭐입지</h1>
-        <!-- method="POST" -->
-        <form  action=""> <!--여기에 method랑 action 입력해주셔야 할 듯 합니다.-->
+{% extends "Registratioon/base.html" %}
+
+{% load static %}
+
+{% load widget_tweaks %}
+
+{% block content %}
+<div class="account-background">
+    <main class="account">
+        <div class="title">
+            <a href="#">
+                <h1 id="logo">이<spna style="color: #8FAADC;">날</spna> 뭐입지</h1>
+            </a>
+        </div>
+
+        <form method="post">
+            {% csrf_token%}
             <!-- 아이디 -->
             <div class="mustInfo">
                 <div id="user_name">
                     <label for="user_name">아이디</label><br>
                     <input type="text" class="inputBox" id="user_name">
+                    {{form.user_name|add_class"cp-input"|attr:"placeholder:아이디"}}
                 </div>
                 <span class="err_mesg" id="id_err_mesg"></span>
             </div>
@@ -80,6 +85,10 @@
             
             <button class="cp-button" type="submit">회원가입</button>
         </form>
+        <div class="info">
+        이미 회원이신가요?<a class="link" href="#">로그인</a>
+        </div>
     </div>
-</body>
-</html>
+
+    </body>
+    </html>
