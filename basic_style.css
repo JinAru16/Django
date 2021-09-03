@@ -11,12 +11,16 @@
     --more-gray-color: rgb(182, 182, 182);
 }
 
+body{
+    margin:0;
+    font-family: 'NanumGothic'; /*글꼴*/
+    background-color: var(--background-color); /*배경색*/
+    display: flex;
+    flex-direction: column;
+}
 a{ /*a태그의 파랑색밑줄 제거*/
     text-decoration: none;
     color: black;
-}
-#nav_mypage a:hover, #nav_category a:hover, #menuWrap a:hover{
-    text-decoration: underline;
 }
 ul{ /*ul태그의 들여쓰기 제거*/
     padding-left:0;
@@ -24,22 +28,17 @@ ul{ /*ul태그의 들여쓰기 제거*/
 li{ /*li태그의 점 제거*/
     list-style: none;
 }
-nav#nav_category li, nav#nav_mypage li{ 
+
+#userPage a:hover, .head__category a:hover, #menuWrap a:hover{
+    text-decoration: underline;
+}
+.head__category li, #userPage li{
     display: inline; /*li태그의 한줄띄기 제거*/
 }
 
-body{
-    margin:0;
-    font-family: 'NanumGothic'; /*글꼴*/
-    background-color: var(--background-color); /*배경색*/
-}
-.container{
-    display: flex;
-    flex-direction: column;
-}
 
 /* 맨 위에 로그인, 장바구니, 마이페이지 있는 곳 */
-#nav_mypage{ 
+#userPage{ 
     background-color: var(--more-gray-color);
     display: flex;
     height: 35px; /*높이*/
@@ -48,24 +47,24 @@ body{
     justify-content:flex-end; /*오른쪽 정렬*/
     align-items: center; /*글들이 (수직축)가운데 오게하기 위해*/
 }
-#nav_mypage a{
+#userPage a{
     margin-right: 50px;
 }
-/* 헤더. 로고랑 카테고리 있는 곳 */
-header{
+/* 로고랑 카테고리 있는 곳 */
+#head{
     /* background-color: orange; */
     display: flex;
     height: 120px;
     padding-right: 15%;
     padding-left: 15%;
 }
-#nav_mainlogo{ /*메인 로고*/
+#head__mainlogo{ /*메인 로고*/
     align-self: center;
     font-size: 2.5rem;
     flex-shrink: 0; /*창 줄여도 글 뭉개지지 않도록*/
 }
 /*카테고리*/
-#nav_category{ 
+.head__category{ 
     /* background-color: gray; */
     text-align: right; /*오른쪽 정렬*/
     align-self: flex-end;
@@ -74,20 +73,20 @@ header{
     flex-grow: 1; /* 쭉 늘어지도록 */
     font-size: 1.3rem;
 }
-#nav_category > ul{
+.head__category > ul{
     display: inline;
 }
-#nav_category a, #nav_menu, #nav_search{
+.head__category a, #head__searchBtn{
     /* background-color: orchid; */
     margin-left: 50px;
 }
-#nav_menuBtn{
+#head__menuBtn{
     cursor: pointer;
     align-self: center;
     font-size: 1.3rem;
     display: none; /*창 크기가 줄었을 때만 보이도록 하기 위해*/
 }
-#nav_search{
+#head__searchBtn{
     cursor: pointer;
     align-self: center;
     font-size: 1.3rem;
@@ -130,7 +129,7 @@ header{
     font-size: 1.4rem;
     width:fit-content;
 }
-#menubar_x{
+#menubar__xBtn{
     font-size: 2.5rem;
     position: absolute;
     right: 450px;
@@ -150,10 +149,10 @@ header{
          display: block;
          transition: right ease 0.3s;
      }
-    #nav_menuBtn{
+    #head__menuBtn{
         display: inline;
     }
-    #nav_category > ul{
+    .head__category > ul{
         display: none;
     }
  }

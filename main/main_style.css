@@ -68,7 +68,7 @@
 
 
 /* 주 컨텐즈 영역 */
-.content{
+main{
     display: flex;
     flex-direction: column;
     margin-top: 65px;
@@ -76,13 +76,13 @@
 .content div#mainbenu{ /*제일 큰 사진*/
     margin-bottom: 100px;
 }
-.content main{ /*메인 영역*/
+.content .bestContent{ /*메인 영역*/
     margin: auto; /*가운데 정렬*/
     /* min-width: 1400px; 폭 고정하려고 */
     /* max-width: 1400px; */
 }
 /*위클리 베스트, 먼슬리 베스트 있는 곳*/
-main .bestProduct{ 
+.bestProduct{ 
     margin-top: 100px;
     max-width: 1400px;
 }

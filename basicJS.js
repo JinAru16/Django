@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     // 메뉴바 클릭했을 때의 동작
-    const menuWrap_xButton = document.querySelector("#menubar_x");
-    const menu_button = document.querySelector("#nav_menuBtn");
+    const menuWrap_xButton = document.querySelector("#menubar__xBtn");
+    const menu_button = document.querySelector("#head__menuBtn");
     const menuWrap = document.querySelector("#menuWrap");
     const overlay = document.querySelector("#menubar_overlay");
 
