@@ -137,6 +137,19 @@ li{ /*li태그의 점 제거*/
     cursor: pointer;
 }
 
+footer{
+    height: 150px;
+    /* background-color: rgb(230, 230, 230); */
+    border-top: 1px solid black;
+    padding: 10px 10%;
+    margin-top: 10px;
+}
+footer > div{
+    text-align: right;
+    height: inherit;
+}
+
+
 /* 폭이 1620 아래가 될 때 메뉴바 */
 @media screen and ( max-width: 1620px){ 
     #menuWrap.on{
