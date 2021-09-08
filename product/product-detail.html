@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="product.js"></script><!-- js파일 -->
     <title>이날 뭐입지</title>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> <!-- 아이콘 -->
     <!-- <script src="https://kit.fontawesome.com/f5e7b03b5b.js"></script> -->
+    <script defer src="product.js"></script><!-- js파일 -->
+    <script defer src="../basicJS.js"></script>
     <link rel="stylesheet" href="product_style.css"> <!-- css파일 -->
     <link rel="stylesheet" href="..\basic_style.css">
 </head>
 
 <body>
-    <div class = "container">
-        <nav id="nav_mypage">
+    <header>
+        <nav id="userPage">
             <ul>
                 <li><a href="">로그인</a></li>
                 <li><a href="">회원가입</a></li>
@@ -22,24 +23,28 @@
                 <li><a href="">마이페이지</a></li>
             </ul>
         </nav>
-        <header>
-            <h1 id="nav_mainlogo"><a href="main.html">이날 뭐입지</a></h1>
-            
-            <nav id="nav_category">
+        
+        <div id="head">
+            <!-- 메인 로고 -->
+            <h1 id="head__mainlogo"><a href="../main/main.html">이날 뭐입지</a></h1>
+            <!-- 옷 카테고리 -->
+            <nav class="head__category">
                 <ul>
-                    <li><a href="">BEST</a></li>
-                    <li><a href="">NEW</a></li>
-                    <li><a href="">CODI</a></li>
+                    <li><a href="#">BEST</a></li>
+                    <li><a href="#">NEW</a></li>
+                    <li><a href="#">CODI</a></li>
                     <li><a href="top.html">TOP</a></li>
-                    <li><a href="">PANTS</a>
-                    <li><a href="">SHOES & BAG</a></li>
+                    <li><a href="#">PANTS</a>
+                    <li><a href="#">SHOES & BAG</a></li>
                 </ul>
-                <span id="nav_menuBtn"><i class="fas fa-bars"></i></span>
-                <span id="nav_search"><i class="fas fa-search"></i></span>
+                <span id="head__menuBtn"><i class="fas fa-bars"></i></span>
+                <span id="head__searchBtn"><i class="fas fa-search"></i></span>
             </nav>
-            <div id="menubar_overlay">
+
+            <!-- 메뉴바 -->
+            <div id="menubar_overlay"> 
                 <nav id="menuWrap">
-                    <span id="menubar_x"><i class="fas fa-times"></i></span>
+                    <span id="menubar__xBtn"><i class="fas fa-times"></i></span>
                     <ul>
                         <li><a href="">로그인</a></li>
                         <li><a href="">회원가입</a></li>
@@ -53,75 +58,74 @@
                         <li><a href="top.html">TOP</a></li>
                         <li><a href="">PANTS</a></li>
                         <li><a href="">SHOES & BAG</a></li>
-                        
                     </ul>
                 </nav>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <section class="content">
-            <nav id="product_menu">
-                <ul>
-                    <li><a href="#product_detail">상세정보</a></li>
-                    <li><a href="#product_review">리뷰</a></li>
-                    <li><a href="#product_qAa">Q&A</a></li>
-                </ul>
-            </nav>
+    <main>
+        <nav id="product_menu">
+            <ul>
+                <li><a href="#product_detail">상세정보</a></li>
+                <li><a href="#product_review">리뷰</a></li>
+                <li><a href="#product_qAa">Q&A</a></li>
+            </ul>
+        </nav>
 
-            <div class="product_info">
-                <!-- 상세정보 -->
-                <div class="product_detail">
-                    <a name="product_detail"><p>상세정보</p></a>
-                    
-                    <img src="..\img\product1.jpg">
-                    <img src="..\img\product2.jpg">
+        <section class="product_info">
+            <!-- 상세정보 -->
+            <section class="product_detail">
+                <a name="product_detail"><div>상세정보</div></a>
+                
+                <img src="..\img\product1.jpg">
+                <img src="..\img\product2.jpg">
+            </section>
+
+            <!-- <p>리뷰</p> -->
+            <section class="product_review">
+                <a name="product_review"></a>
+
+                <div id="total_review">
+                    <div>
+                        <p>사용자 총 평점</p>
+                        <p id="total_star" class="review__total">4.8</p>
+                    </div>
+                    <div>
+                        <p>전체 리뷰수</p>
+                        <p id="total_numOfReview" class="review__total">1234</p>
+                    </div>
                 </div>
 
-                <!-- <p>리뷰</p> -->
-                <div class="product_review">
-                    <a name="product_review"></a>
-
-                    <div id="total_review">
-                        <div>
-                            <p>사용자 총 평점</p>
-                            <p id="total_star" class="review__total">4.8</p>
+                <div class="reviewList">
+                <!-- <div class="review__unit">
+                        <div class="review__star">
+                            <p>별점</p>
                         </div>
-                        <div>
-                            <p>전체 리뷰수</p>
-                            <p id="total_numOfReview" class="review__total">1234</p>
+                        <div class="review__id_date">
+                            <p>아이디 / 날짜</p>
+                        </div>
+                        <div class="review__productName">
+                            <p>제품 이름</p>
+                        </div>
+                        <div class="review__content">
+                            <p>>리뷰 내용</p>
                         </div>
                     </div>
-
-                    <div class="reviewList">
-                    <!-- <div class="review__unit">
-                            <div class="review__star">
-                                <p>별점</p>
-                            </div>
-                            <div class="review__id_date">
-                                <p>아이디 / 날짜</p>
-                            </div>
-                            <div class="review__productName">
-                                <p>제품 이름</p>
-                            </div>
-                            <div class="review__content">
-                                <p>>리뷰 내용</p>
-                            </div>
-                        </div>
-                        <hr>
-                    </div>-->
-                </div>
-                
-                <!-- 큐엔에이. 지금 당장 필요한 내용은 아닌 것 같아 일단 빈칸으로 냅뒀습니다! -->
-                <div class="product_qAa">
-                    <a name="product_qAa"></a>
-                    <p>Q&A</p>
-                </div>
+                    <hr>
+                </div>-->
             </div>
+            
+            <!-- 큐엔에이. 지금 당장 필요한 내용은 아닌 것 같아 일단 빈칸으로 냅뒀습니다! -->
+            <section class="product_qAa">
+                <a name="product_qAa"></a>
+                <p>Q&A</p>
+            </section>
         </section>
+    </main>
 
-        <footer>
-            <!-- 미정. -->
-        </footer>
-    </div>
+    <footer>
+        <!-- 미정. -->
+    </footer>
 </body>
 </html>
