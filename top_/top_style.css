@@ -1,4 +1,3 @@
-
 /* 주 컨텐즈 영역 */
 .content{
     display: flex;
@@ -44,11 +43,12 @@ main article .closet{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
 #array{            
     margin-bottom: 30px;
     font-size: 1.2rem;
+    text-align: right;
 }
 
 .bestclothes{
-    width: 380px;
-    height: 550px;
+    width: 360px;
+    height: 530px;
 }
 
 .clothes{

@@ -1,0 +1,171 @@
+@font-face{
+    font-family:'NanumGothic'; /*글꼴*/
+    src: local('NanumGothic'),
+    url('NanumGothic.eot'),
+    url('NanumGothic.woff') format('woff'),
+    url('NanumGothic.ttf') format('truetype');
+}
+:root{
+    --background-color: white;
+    --basic-gray-color: #e6e6e6;
+    --more-gray-color: rgb(182, 182, 182);
+}
+
+body{
+    margin:0;
+    font-family: 'NanumGothic'; /*글꼴*/
+    background-color: var(--background-color); /*배경색*/
+    display: flex;
+    flex-direction: column;
+}
+a{ /*a태그의 파랑색밑줄 제거*/
+    text-decoration: none;
+    color: black;
+}
+ul{ /*ul태그의 들여쓰기 제거*/
+    padding-left:0;
+}
+li{ /*li태그의 점 제거*/
+    list-style: none;
+}
+
+#userPage a:hover, .head__category a:hover, #menuWrap a:hover{
+    text-decoration: underline;
+}
+.head__category li, #userPage li{
+    display: inline; /*li태그의 한줄띄기 제거*/
+}
+
+
+/* 맨 위에 로그인, 장바구니, 마이페이지 있는 곳 */
+#userPage{ 
+    background-color: var(--more-gray-color);
+    display: flex;
+    height: 35px; /*높이*/
+    padding-right: 10%;
+    padding-left: 10%;
+    justify-content:flex-end; /*오른쪽 정렬*/
+    align-items: center; /*글들이 (수직축)가운데 오게하기 위해*/
+}
+#userPage a{
+    margin-right: 50px;
+}
+/* 로고랑 카테고리 있는 곳 */
+#head{
+    /* background-color: orange; */
+    display: flex;
+    height: 120px;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+#head__mainlogo{ /*메인 로고*/
+    align-self: center;
+    font-size: 2.5rem;
+    flex-shrink: 0; /*창 줄여도 글 뭉개지지 않도록*/
+}
+/*카테고리*/
+.head__category{ 
+    /* background-color: gray; */
+    text-align: right; /*오른쪽 정렬*/
+    align-self: flex-end;
+    margin-left: auto;
+    margin-bottom: 30px;
+    flex-grow: 1; /* 쭉 늘어지도록 */
+    font-size: 1.3rem;
+}
+.head__category > ul{
+    display: inline;
+}
+.head__category a, #head__searchBtn{
+    /* background-color: orchid; */
+    margin-left: 50px;
+}
+#head__menuBtn{
+    cursor: pointer;
+    align-self: center;
+    font-size: 1.3rem;
+    display: none; /*창 크기가 줄었을 때만 보이도록 하기 위해*/
+}
+#head__searchBtn{
+    cursor: pointer;
+    align-self: center;
+    font-size: 1.3rem;
+}
+
+/* 메뉴바 */
+#menubar_overlay{
+    background-color: rgba(0, 0, 0, 0.5); /*불투명도*/
+    position: absolute;
+    width:100%;
+    height: 100%;
+    right: -100%;
+    top: 0;
+    transition: right ease 0.3s; /*움직임에 효과(시간적 차)를 주기 위해*/
+    position: fixed; /*이거 안하면 얘 있는데까지 스크롤이 되더라*/
+    z-index: 2;
+}
+#menuWrap{
+    background-color: var(--basic-gray-color);
+    position:absolute;
+    width:500px;
+    height:100%;
+    position: fixed; 
+    right: -500px; 
+    top:0;
+    transition: right ease 0.3s; /* 적용할 속성, 진행속도, 총 시간 */
+}
+#menuWrap ul{
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*가로축*/
+    justify-content: space-between; /*수직축*/
+    height: 100%;
+    padding: 30px 30px;
+    margin: 0;
+}
+#menuWrap li{
+    /* background-color: aqua; */
+    font-size: 1.4rem;
+    width:fit-content;
+}
+#menubar__xBtn{
+    font-size: 2.5rem;
+    position: absolute;
+    right: 450px;
+    top:10px;
+    cursor: pointer;
+}
+
+footer{
+    height: 150px;
+    /* background-color: rgb(230, 230, 230); */
+    border-top: 1px solid black;
+    padding: 10px 10%;
+    margin-top: 10px;
+}
+footer > div{
+    text-align: right;
+    height: inherit;
+}
+
+
+/* 폭이 1620 아래가 될 때 메뉴바 */
+@media screen and ( max-width: 1620px){ 
+    #menuWrap.on{
+        right:0;
+        display: block;
+        transition: right ease 0.3s;
+     }
+     #menubar_overlay.on{
+         right: 0;
+         display: block;
+         transition: right ease 0.3s;
+     }
+    #head__menuBtn{
+        display: inline;
+    }
+    .head__category > ul{
+        display: none;
+    }
+ }
