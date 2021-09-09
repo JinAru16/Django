@@ -1,4 +1,52 @@
 /* 주 컨텐즈 영역 */
+.pagebox{
+    padding: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-style: none;
+    margin-bottom: 80px;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+table{
+    border-color: white;
+    border-spacing: 8px;
+    line-height: 120%;
+    table-layout: fixed;
+}
+
+th{
+    width: 30%;
+    height: auto;
+    text-align: left;
+    font-size: small;
+}
+
+td{
+    width: 100%;
+    height: auto;
+    font-size: smaller;
+}
+
+.buttons{
+    text-align: right;
+}
+
+.productImg{ /*상품 대표 이미지*/
+    width:430px;
+    height: 600px;
+    float: left;
+}
+
+.clothesImg{ /*옷 이미지*/
+    width: 100%;
+}
+
+.saleFont{
+    color: red;
+}
 /* 상세정보, 리뷰, Q&A 메뉴 있는 곳 */
 #product_menu{
     background-color:white;

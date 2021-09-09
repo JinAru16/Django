@@ -1,0 +1,79 @@
+/* 주 컨텐즈 영역 */
+
+#closet-dataArea{ /*메인 영역*/
+    margin: auto; /*가운데 정렬*/
+    max-width: 1400px;
+}
+
+main article .subtitle{ /*제목*/
+    /* background-color: palegreen; */
+    text-align: center; /*가운데 정렬*/
+    font-size: 1.6rem;
+    margin-bottom: 100px;
+}
+
+main article .best{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+main article .closet{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box{
+    background-color: rgb(227, 245, 245);
+    padding: 60px;
+    border-style: none;
+    margin-bottom: 80px;
+}
+
+#array{            
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.bestclothes{
+    width: 360px;
+    height: 530px;
+}
+
+.clothes{
+    max-width:330px;
+    max-height: 500px;
+    margin: 20px 10px;
+    /* background-color: palevioletred; */
+}
+.clothesImg{ /*옷 이미지*/
+    width: 100%;
+}
+
+.showMore{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.showMore__btn{
+    cursor:pointer;
+    background-color: rgb(241, 241, 241);
+    color: rgb(0, 0, 0);
+    padding: 12px 27px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+}
+
+#closet-dataArea{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, auto));
+    grid-template-rows: repeat(2, minmax(100px, auto));
+}
+@media screen and ( max-width: 1000px){ 
+    #closet-dataArea{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, auto));
+        grid-template-rows: repeat(2, minmax(100px, auto));
+    }
+}
