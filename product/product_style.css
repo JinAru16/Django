@@ -1,8 +1,8 @@
 /* 주 컨텐즈 영역 */
 .pagebox{
     padding: 60px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 90px;
+    padding-right: 90px;
     border-style: none;
     margin-bottom: 80px;
     display:flex;
@@ -35,10 +35,10 @@ td{
 }
 
 .productImg{ /*상품 대표 이미지*/
-    width:430px;
-    height: 600px;
+    width:450px;
+    height: 620px;
     float: left;
-    margin-right: 40px;
+    margin-right: 60px;
 }
 
 .clothesImg{ /*옷 이미지*/
