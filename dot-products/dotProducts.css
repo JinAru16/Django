@@ -133,4 +133,5 @@ p{
     border-radius: 20px;
     border: none;
     font-size: 1rem;
+    cursor: pointer;
 }

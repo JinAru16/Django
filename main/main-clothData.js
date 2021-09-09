@@ -71,7 +71,7 @@ for(let i=0; i<weeklyBestData.length; i++){
     unit.className = "bestProduct__cloth";
     unit.innerHTML = `
         <a href="${weeklyBestData[i].pagelink}">
-            <img class = "clothesImg" src="${weeklyBestData[i].img}">
+            <img class = "clothesImg" src="${weeklyBestData[i].img}" alt="${weeklyBestData[i].name}" title="${weeklyBestData[i].name}">
             <div>${weeklyBestData[i].name}</div>
             <div>${weeklyBestData[i].price}</div>
         </a>
@@ -87,7 +87,7 @@ for(let i=0; i<monthlyBestData.length; i++){
     unit.className = "bestProduct__cloth";
     unit.innerHTML = `
         <a href="${monthlyBestData[i].pagelink}">
-            <img class = "clothesImg" src="${monthlyBestData[i].img}">
+            <img class = "clothesImg" src="${monthlyBestData[i].img}" alt="${monthlyBestData[i].name}" title="${monthlyBestData[i].name}">
             <div>${monthlyBestData[i].name}</div>
             <div>${monthlyBestData[i].price}</div>
         </a>
