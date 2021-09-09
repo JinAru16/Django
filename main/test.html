@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const test = document.querySelector(".test1");
+            const inner1 = document.querySelector(".inner1");
+            const inner2 = document.querySelector(".inner2");
+
+            test.addEventListener("mouseenter", () =>{
+                console.log("touct");
+            })
+            test.addEventListener("mouseleave", () => {
+                console.log("out");
+            })
+        })
+    </script>
+    <style>
+        .test1{
+            width: 500px;
+            height: 500px;
+            background-color: aqua;
+        }
+        .inner1{
+            width: 300px;
+            height: 100px;
+            background-color: blue;
+        }
+        .inner2{
+            width: 300px;
+            height: 100px;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="test1">
+        <div class="inner1">
+
+        </div>
+        <div class="inner2">
+
+        </div>
+    </div>
+</body>
+</html>
