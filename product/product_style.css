@@ -6,7 +6,7 @@
     border-style: none;
     margin-bottom: 80px;
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -38,6 +38,7 @@ td{
     width:430px;
     height: 600px;
     float: left;
+    margin-right: 40px;
 }
 
 .clothesImg{ /*옷 이미지*/
