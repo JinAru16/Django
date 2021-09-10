@@ -77,3 +77,9 @@ infos.forEach((info) => {
         dotCount = 0;
     }
 })
+
+
+const showMore_btn = document.querySelector(".showMore__btn");
+showMore_btn.addEventListener("click", () => {
+    alert("아직 구현 안됨.");
+})
