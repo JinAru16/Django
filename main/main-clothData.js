@@ -14,21 +14,21 @@ const clothsData = {
             "name": "베이직 니트",
             "price": "24,000",
             "pagelink": "../product/product-detail.html",
-            "img": "../img/clothes1.jpg"
+            "img": "../img/clothes2.jpg"
         },
         {
             "rank":3,
             "name": "체크 카디건",
             "price": "35,000",
             "pagelink": "../product/product-detail.html",
-            "img": "../img/clothes1.jpg"
+            "img": "../img/clothes3.jpg"
         },
         {
             "rank":4,
             "name": "포근한 카디건",
             "price": "28,000",
             "pagelink": "../product/product-detail.html",
-            "img": "../img/clothes1.jpg"
+            "img": "../img/clothes4.jpg"
         }
     ],
 
@@ -38,21 +38,21 @@ const clothsData = {
             "name": "썸머 쿨 아리랑",
             "price": "15,000",
             "pagelink": "../product/product-detail.html",
-            "img": "../img/clothes1.jpg"
+            "img": "../img/clothes3.jpg"
         },
         {
             "rank":2,
             "name": "베이직 니트",
             "price": "24,000",
             "pagelink": "../product/product-detail.html",
-            "img": "../img/clothes1.jpg"
+            "img": "../img/clothes4.jpg"
         },
         {
             "rank":3,
             "name": "체크 카디건",
             "price": "35,000",
             "pagelink": "../product/product-detail.html",
-            "img": "../img/clothes1.jpg"
+            "img": "../img/clothes2.jpg"
         },
         {
             "rank":4,
