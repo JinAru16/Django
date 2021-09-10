@@ -19,7 +19,7 @@ main article .best{
 
 main article .closet{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -38,7 +38,8 @@ main article .closet{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
 
 .bestclothes{
     width: 360px;
-    height: 530px;
+    max-height: 530px;
+    margin: 0 30px;
 }
 
 .clothes{

@@ -5,7 +5,12 @@ const data = {
         {
             name: "썸머 쿨 아리랑",
             price: "15,000",
-            img: "../img/clothes1.jpg"
+            img: "../img/clothes4.jpg"
+        },
+        {
+            name: "썸머 쿨 아리랑",
+            price: "15,000",
+            img: "../img/clothes3.jpg"
         },
         {
             name: "썸머 쿨 아리랑",
@@ -15,27 +20,22 @@ const data = {
         {
             name: "썸머 쿨 아리랑",
             price: "15,000",
-            img: "../img/clothes1.jpg"
+            img: "../img/clothes2.jpg"
         },
         {
             name: "썸머 쿨 아리랑",
             price: "15,000",
-            img: "../img/clothes1.jpg"
+            img: "../img/clothes4.jpg"
         },
         {
             name: "썸머 쿨 아리랑",
             price: "15,000",
-            img: "../img/clothes1.jpg"
+            img: "../img/clothes2.jpg"
         },
         {
             name: "썸머 쿨 아리랑",
             price: "15,000",
-            img: "../img/clothes1.jpg"
-        },
-        {
-            name: "썸머 쿨 아리랑",
-            price: "15,000",
-            img: "../img/clothes1.jpg"
+            img: "../img/clothes3.jpg"
         },
         {
             name: "썸머 쿨 아리랑",
