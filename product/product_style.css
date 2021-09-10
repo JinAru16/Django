@@ -4,7 +4,7 @@
     padding-left: 90px;
     padding-right: 90px;
     border-style: none;
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
     display:flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -38,7 +38,13 @@ td{
     width:450px;
     height: 620px;
     float: left;
-    margin-right: 60px;
+    padding: 10px 30px;
+    border: 1px solid lightgray;
+}
+.mainclothes{
+    padding: 10px 30px;
+    border: 1px solid lightgray;
+    border-left: none;
 }
 
 .clothesImg{ /*옷 이미지*/
