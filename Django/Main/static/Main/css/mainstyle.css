@@ -1,136 +1,74 @@
-@font-face{
-    font-family:'NanumGothic'; /*글꼴*/
-    src: local('NanumGothic'),
-    url('NanumGothic.eot'),
-    url('NanumGothic.woff') format('woff'),
-    url('NanumGothic.ttf') format('truetype');
+/* 메인베너 슬라이드 이미지 */
+#mainbenu__overlay{
+    /* background-color: antiquewhite; */
+    width:1903px;
+    height:750px;
+    position: relative;
+    overflow: hidden; /*이러면 이 크기를 넘어서서 있는 것들을 숨김*/
+    z-index: 1; /*맨앞으로 보내기같은거. 숫자가 클수록 위에있음.*/
 }
-a{
-    text-decoration: none;
-    color: black;
+.mainbenu__imgList{
+    display: flex; /*flex로 해야 이미지들이 알아서 옆으로 나열됨.*/
+    position:absolute; /*그래야 맨 첫번째 이미지부터 보이게 할 수 있음.*/
+    top:0;
+    left:0;
+    transition: left ease 0.3s;
 }
-a:hover{
-    text-decoration: underline;
+.mainbenu__img{
+    /* background-color: yellow; */
+    width:inherit;
+    height:inherit;
 }
-ul{
-    padding-left:0;
-}
-li{  
-    list-style: none;
-}
-nav#category li, nav#mypage li{
-    display: inline;
-}
-
-body{
-    margin:0;
-    font-family: 'NanumGothic'; /*글꼴*/
-}
-.container{
-    display: flex;
-    flex-direction: column;
-}
-
-/* 맨 위에 로그인, 장바구니, 마이페이지 있는 곳 */
-#mypage{ 
-    background-color: rgb(182, 182, 182);
-    display: flex;
-    height: 35px; /*높이*/
-    padding-right: 10%;
-    padding-left: 10%;
-    justify-content:flex-end; /*오른쪽 정렬*/
-    align-items: center; /*글들이 가운데 오게하기 위해*/
-}
-#mypage a{
-    margin-right: 50px;
-}
-/* 헤더. 로고랑 카테고리 있는 곳 */
-header{
-    /* background-color: orange; */
-    display: flex;
-    height: 120px;
-    padding-right: 15%;
-    padding-left: 15%;
-}
-header #logo{ /*메인 로고*/
-    align-self: center;
-    font-size: 2.5rem;
-    flex-shrink: 0; /*창 줄여도 글 뭉개지지 않도록*/
-}
-header nav#category{ /*카테고리*/
-    /* background-color: gray; */
-    text-align: right; /*오른쪽 정렬*/
-    align-self: flex-end;
-    margin-left: auto;
-    margin-bottom: 30px;
-    flex-grow: 1;
-    font-size: 1.3rem;
-}
-#category > ul{
-    display: inline;
-}
-header nav#category a, #nav_menu, #nav_search{
-    /* background-color: orchid; */
-    margin-left: 50px;
-}
-#nav_menubar{
-    align-self: center;
-    font-size: 1.3rem;
-    display: none;
-}
-#nav_search{
-    align-self: center;
-    font-size: 1.3rem;
-}
-#menuWrap{
-    background-color: #e6e6e6;
-    position:absolute;
-    width:500px;
-    height:100%;
-    position: fixed;
-    right: -500px;
-    transition: right ease 0.3s; /*transition: 적용할 속성, 진행속도, 총 시간*/
-}
-#menuWrap ul{
-    padding:0;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    justify-content: space-between;
-    padding: 30px 30px;
-    /* background-color: blueviolet; */
-    margin: 0;
-    /* padding-top:70px; */
-}
-#menuWrap li{
-    /* background-color: aqua; */
-    /* padding: ; */
-    /* text-align: center; */
-    /* margin-bottom: 30%; */
-    font-size: 1.4rem;
+.mainbenu__tempImg{
     width:fit-content;
-}
-#navbar_x{
-    font-size: 2.5rem;
-    position: absolute;
-    right: 450px;
-    top:10px;
+    height: fit-content;
 }
 
-#dimmed { 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    z-index: 300; 
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0, 0, 0, 0.5); 
+/* 메인베너 슬라이드 이미지 화살표버튼 */
+.mainbenu__direc{
+    font-size: 2rem;
+    color: rgba(82, 82, 82, 0.596);
+    cursor: pointer;
+    position:absolute;
+    display: inline;
+}
+.mainbenu__direc#back{
+    /* background-color: blue; */
+    top: 50%;
+    margin-left: 20px;
+}
+.mainbenu__direc#front{
+    /* background-color: blue; */
+    top: 50%;
+    right: 0;
+    margin-right: 20px;
+}
+
+/* 메인베너 슬라이드 이미지 밑에 점 */
+.mainbenu__dotList{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+}
+.mainbenu__dot{
+    background-color: rgba(172, 172, 172, 0.493);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 0 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+.active, .mainbenu__dot:hover{
+    background-color: rgb(138, 138, 138);
 }
 
 
 /* 주 컨텐즈 영역 */
-.content{
+main{
     display: flex;
     flex-direction: column;
     margin-top: 65px;
@@ -138,44 +76,40 @@ header nav#category a, #nav_menu, #nav_search{
 .content div#mainbenu{ /*제일 큰 사진*/
     margin-bottom: 100px;
 }
-.content main{ /*메인 영역*/
+.content .bestContent{ /*메인 영역*/
     margin: auto; /*가운데 정렬*/
-    min-width: 1400px; /*폭 고정하려고*/
+    /* min-width: 1400px; 폭 고정하려고 */
+    /* max-width: 1400px; */
+}
+/*위클리 베스트, 먼슬리 베스트 있는 곳*/
+.bestProduct{ 
+    margin-top: 100px;
     max-width: 1400px;
 }
-main article{ /*위클리 베스트, 먼슬리 베스트 있는 곳*/
-    margin-top: 100px;
-}
-main article .subtitle{ /*제목*/
+.bestProduct__subtitle{ /*제목*/
     /* background-color: palegreen; */
     text-align: center; /*가운데 정렬*/
     font-size: 1.6rem;
     margin-bottom: 100px;
 }
-main article .closet{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
+.bestProduct__bundle{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
+    /* background-color: cadetblue; */
     display:flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-around;
 }
-.clothes{
-    width:330px;
-    height: 500px;
+.bestProduct__cloth{ /*옷 이미지와 이름,가격 묶음*/
+    max-width:330px;
+    max-height: 400px;
+    margin: 0 5px;
     /* background-color: palevioletred; */
 }
 .clothesImg{ /*옷 이미지*/
     width: 100%;
 }
-
-
-@media screen and ( max-width: 1620px){
-   #menuWrap.on{
-       right:0;
-       transition: right ease 0.3s;
-   }
-   #nav_menubar{
-       display: inline;
-   }
-   #category > ul{
-       display: none;
-   }
+.bestProduct__viewAll{
+    /* background-color: cyan; */
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: blue;
 }
