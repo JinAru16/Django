@@ -1,37 +1,38 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>TOP</title>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> <!-- 아이콘 -->
-    <script defer src="../basicJS.js"></script> <!--js파일-->
-    <script defer src="top-data.js"></script>
-    <link rel="stylesheet" href="../basic_style.css"> <!--css파일-->
-    <link rel="stylesheet" href="top_style.css">
+    <script defer src={% static "Main/js/basicJS.js" %}></script> <!--js파일-->
+    <script defer src={% static "Top/js/topdata.js" %}></script>
+    <link rel="stylesheet" href="{% static "Main/css/basic_style.css" %}"> <!--css파일-->
+    <link rel="stylesheet" href="{% static "Top/css/topstyle.css" %}">
 <body>
     <header>
         <nav id="userPage">
             <ul>
-                <li><a href="">로그인</a></li>
-                <li><a href="">회원가입</a></li>
-                <li><a href="">장바구니<i class="fas fa-shopping-cart"></i></a></li>
-                <li><a href="">주문<i class="fas fa-truck"></i></a></li>
-                <li><a href="">마이페이지</a></li>
+                <li><a href="{% url 'account_login' %}">로그인</a></li>
+                <li><a href="{% url 'account_signup' %}">회원가입</a></li>
+                <li><a href="/ShoppingCart">장바구니<i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="/Order">주문<i class="fas fa-truck"></i></a></li>
+                <li><a href="/MyPage">마이페이지</a></li>
             </ul>
         </nav>
         
         <div id="head">
             <!-- 메인 로고 -->
-            <h1 id="head__mainlogo"><a href="main.html">이날 뭐입지</a></h1>
+            <h1 id="head__mainlogo"><a href="/Main">이날 뭐입지</a></h1>
             <!-- 옷 카테고리 -->
             <nav class="head__category">
                 <ul>
-                    <li><a href="#">BEST</a></li>
-                    <li><a href="#">NEW</a></li>
-                    <li><a href="../dot-products/dotProducts.html">CODI</a></li>
-                    <li><a href="../top/top.html">TOP</a></li>
-                    <li><a href="#">PANTS</a>
-                    <li><a href="#">SHOES & BAG</a></li>
+                    <li><a href="/Best">BEST</a></li>
+                    <li><a href="/New">NEW</a></li>
+                    <li><a href="/Codi">CODI</a></li>
+                    <li><a href="/Top">TOP</a></li>
+                    <li><a href="/Pants">PANTS</a>
+                    <li><a href="/Shoes_and_Bag">SHOES/BAG</a></li>
                 </ul>
                 <span id="head__menuBtn"><i class="fas fa-bars"></i></span>
                 <span id="head__searchBtn"><i class="fas fa-search"></i></span>
@@ -42,18 +43,18 @@
                 <nav id="menuWrap">
                     <span id="menubar__xBtn"><i class="fas fa-times"></i></span>
                     <ul>
-                        <li><a href="">로그인</a></li>
-                        <li><a href="">회원가입</a></li>
-                        <li><a href="">장바구니</a></li>
-                        <li><a href="">주문</a></li>
-                        <li><a href="">마이페이지</a></li>
+                        <li><a href="/Login">로그인</a></li>
+                        <li><a href="/Registration">회원가입</a></li>
+                        <li><a href="/ShoppingCart">장바구니</a></li>
+                        <li><a href="/Order">주문</a></li>
+                        <li><a href="/MyPage">마이페이지</a></li>
                         <hr>
-                        <li><a href="">BEST</a></li>
-                        <li><a href="">NEW</a></li>
-                        <li><a href="../dot-products/dotProducts.html">CODI</a></li>
-                        <li><a href="../top/top.html">TOP</a></li>
-                        <li><a href="">PANTS</a></li>
-                        <li><a href="">SHOES & BAG</a></li>
+                        <li><a href="/Best">BEST</a></li>
+                        <li><a href="/New">NEW</a></li>
+                        <li><a href="/CODI">CODI</a></li>
+                        <li><a href="/Top">TOP</a></li>
+                        <li><a href="/Pants">PANTS</a></li>
+                        <li><a href="/Shoes_and_Bag">SHOES / BAG</a></li>
                     </ul>
                 </nav>
             </div>
@@ -68,17 +69,17 @@
             <div class="box">
                 <div class="closet">
                     <div class="bestclothes">
-                        <a><img class = "clothesImg" src="../img/clothes1.jpg"></a>
+                        <a><img class = "clothesImg" src={% static "Top/img/clothes1.jpg" %}></a>
                         <p><a>썸머 쿨 아리랑</a></p>
                         <p>15000</p>
                     </div>
                     <div class="bestclothes">
-                        <a><img class = "clothesImg" src="../img/clothes2.jpg"></a>
+                        <a><img class = "clothesImg" src={% static "Top/img/clothes2.jpg" %}></a>
                         <p><a>썸머 쿨 아리랑</a></p>
                         <p>15000</p>
                     </div>
                     <div class="bestclothes">
-                        <a><img class = "clothesImg" src="../img/clothes3.jpg"></a>
+                        <a><img class = "clothesImg" src={% static "Top/img/clothes3.jpg" %}></a>
                         <p><a>썸머 쿨 아리랑</a></p>
                         <p>15000</p>
                     </div>
