@@ -5,9 +5,9 @@ const clothsData = {
         {
             "rank":1,
             "name": "썸머 쿨 아리랑",
-            "price": "1,000",
+            "price": "15,000",
             "pagelink": "../product/product-detail.html",
-            "img": "/static/Main/img/clothes1.jpg"
+            "img": "../img/clothes1.jpg"
         },
         {
             "rank":2,
