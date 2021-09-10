@@ -1,4 +1,4 @@
-{% load static %}
+{% load  static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,8 +7,7 @@
     <title>이날 뭐입지</title>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> <!-- 아이콘 -->
     <!-- <script src="https://kit.fontawesome.com/f5e7b03b5b.js"></script> -->
-    <script defer src={% static "Main/js/basicJS.js" %}></script> <!-- js파일 -->
-    <script defer src={% static "Codi/js/dotProducts-data.js" %}></script>
+    <script defer src={% static "Main/basicJS.js"%}></script> <!-- js파일 -->
     <link rel="stylesheet" href={% static "Main/css/basic_style.css" %}> <!-- css파일 -->
     <link rel="stylesheet" href={% static "Codi/css/dotProducts.css" %}>
 </head>
@@ -17,8 +16,8 @@
     <header>
         <nav id="userPage">
             <ul>
-                <li><a href="/Login">로그인</a></li>
-                <li><a href="/Registration">회원가입</a></li>
+                <li><a href="{% url 'account_login' %}">로그인</a></li>
+                <li><a href="{% url 'account_signup' %}">회원가입</a></li>
                 <li><a href="/ShoppingCart">장바구니<i class="fas fa-shopping-cart"></i></a></li>
                 <li><a href="/Order">주문<i class="fas fa-truck"></i></a></li>
                 <li><a href="/MyPage">마이페이지</a></li>
@@ -33,10 +32,10 @@
                 <ul>
                     <li><a href="/Best">BEST</a></li>
                     <li><a href="/New">NEW</a></li>
-                    <li><a href="/Codi">CODI</a></li>
-                    <li><a href="/Top">TOP</a></li>
-                    <li><a href="/Pants">PANTS</a>
-                    <li><a href="/Shoes_and_Bag">SHOES & BAG</a></li>
+                    <li><a href="/Codi">Codi</a></li>
+                    <li><a href ="/Top">Top</a></li>
+                    <li><a href ="/Pants">Pants</a></li>
+                    <li><a href ="/Shoes_and_Bag">Shoes/Bag</a></li>
                 </ul>
                 <span id="head__menuBtn"><i class="fas fa-bars"></i></span>
                 <span id="head__searchBtn"><i class="fas fa-search"></i></span>
@@ -48,7 +47,7 @@
                     <span id="menubar__xBtn"><i class="fas fa-times"></i></span>
                     <ul>
                         <li><a href="/Login">로그인</a></li>
-                        <li><a href="/Registration">회원가입</a></li>
+                        <li><a href="/Resistration">회원가입</a></li>
                         <li><a href="/ShoppingCart">장바구니</a></li>
                         <li><a href="/Order">주문</a></li>
                         <li><a href="/MyPage">마이페이지</a></li>
@@ -57,7 +56,7 @@
                         <li><a href="/New">NEW</a></li>
                         <li><a href="/Codi">CODI</a></li>
                         <li><a href="/Top">TOP</a></li>
-                        <li><a href="/Pants">PANTS</a>
+                        <li><a href="/Pants">PANTS</a></li>
                         <li><a href="/Shoes_and_Bag">SHOES & BAG</a></li>
                     </ul>
                 </nav>
@@ -83,106 +82,7 @@
     
                     <section class="effectCodiDot">
                         <div class="effect__dot">
-                            <a href="../product/product-detail.html">
-                                <span class="dot__dotOut">
-                                    <span class="dot__dot"></span>
-                                </span>
-                            </a>
-                            <div class="dot__info">
-                                <p class="dot__name">체크 셔츠</p>
-                                <p class="dot__price">22,000</p>
-                            </div>
-                        </div>
-                        <div class="effect__dot">
-                            <a href="../product/product-detail.html">
-                                <span class="dot__dotOut">
-                                    <span class="dot__dot"></span>
-                                </span>
-                            </a>
-                            <div class="dot__info">
-                                <p class="dot__name">바지</p>
-                                <p class="dot__price">30,000</p>
-                            </div>
-                        </div>
-                        <div class="effect__dot">
-                            <a href="../product/product-detail.html">
-                                <span class="dot__dotOut">
-                                    <span class="dot__dot"></span>
-                                </span>
-                            </a>
-                            <div class="dot__info">
-                                <p class="dot__name">구두</p>
-                                <p class="dot__price">32,000</p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                
-                <div class="codi__info">
-                    <!-- 옷 설명 -->
-                    <h4 class="codi__tag">#겨울 심플 룩 #개강 첫날 #벌써 개강이라니</h4>
-                    <div class="codi__explanation">
-                        <p>각 아이템들의 시각적 나열 순서를 결정하는 속성이예요.</p>
-                        <p>
-                            숫자값이 들어가며, 작은 숫자일 수록 먼저 배치됩니다. "시각적" 순서일 뿐, HTML 자체의 
-                            구조를 바꾸는 것은 아니므로 접근성 측면에서 사용에 주의하셔야 합니다. 시각 장애인분들이 
-                            사용하는 스크린 리더로 화면을 읽을 때, order를 이용해 순서를 바꾼 것은 의미가 없다는 것을 
-                            기억해 주세요.
-                        </p>
-                    </div>
-                </div>
-
-                <section class="codi__relation">
-                    <!-- 연관된 옷 -->
-                    <div class="relation__showSimilar"><b>비슷한 상품 보기</b></div>
-                    <div class="relation__table">
-                        <a class="relation__imgOut" href="../product/product-detail.html">
-                            <img class="relation__img" src={% static "Codi/img/dotRelation1.jpg" %}>
-                            <p class="relation__name">올데이 시원한 브이넥</p>  
-                            <p class="relation__price">23,000</p>
-                        </a>
-                        <a class="relation__imgOut" href="../product/product-detail.html">
-                            <img class="relation__img" src={% static "Codi/img/dotRelation3.jpg" %}>
-                            <p class="relation__name">폴리 하프 니트</p>
-                            <p class="relation__price">23,000</p>
-                        </a>
-                        <a class="relation__imgOut" href="../product/product-detail.html">
-                            <img class="relation__img" src={% static "Codi/img/dotRelation2.jpg" %}>
-                            <p class="relation__name">폴리 하프 니트</p>
-                            <p class="relation__price">23,000</p>
-                        </a>
-                        <a class="relation__imgOut" href="../product/product-detail.html">
-                            <img class="relation__img" src={% static "Codi/img/dotRelation4.jpg" %}>
-                            <p class="relation__name">폴리 하프 니트</p>
-                            <p class="relation__price">23,000</p>
-                        </a>
-                        <a class="relation__imgOut" href="../product/product-detail.html">
-                            <img class="relation__img" src={% static "Codi/img/dotRelation4.jpg" %}>
-                            <p class="relation__name">폴리 하프 니트</p>
-                            <p class="relation__price">23,000</p>
-                        </a>
-                        <a class="relation__imgOut" href="../product/product-detail.html">
-                            <img class="relation__img" src={% static "Codi/img/dotRelation4.jpg" %}>
-                            <p class="relation__name">폴리 하프 니트</p>
-                            <p class="relation__price">23,000</p>
-                        </a>
-                        <div>
-                            더보기
-                        </div>
-                    </div> 
-                </section>
-            </section>
-
-            <section class="codi">
-                <!-- 옷 하나 -->
-                <div class="codi__effectImg">
-                    <div class="codi__imgOut">
-                        <img class="codi__img" src={% static "Codi/img/productDot1.jpg" %}>
-                    </div>
-    
-                    <section class="effectCodiDot">
-                        <div class="effect__dot">
-                            <a href="../product/product-detail.html">
+                            <a href="https://joooohee.tistory.com/52">
                                 <span id="dot1" class="dot__dotOut">
                                     <span class="dot__dot"></span>
                                 </span>
@@ -193,7 +93,7 @@
                             </div>
                         </div>
                         <div class="effect__dot">
-                            <a href="../product/product-detail.html">
+                            <a href="https://joooohee.tistory.com/52">
                                 <span id="dot2" class="dot__dotOut">
                                     <span class="dot__dot"></span>
                                 </span>
@@ -204,7 +104,7 @@
                             </div>
                         </div>
                         <div class="effect__dot">
-                            <a href="../product/product-detail.html">
+                            <a href="https://joooohee.tistory.com/52">
                                 <span id="dot3" class="dot__dotOut">
                                     <span class="dot__dot"></span>
                                 </span>
@@ -221,70 +121,160 @@
                     <!-- 옷 설명 -->
                     <h4 class="codi__tag">#겨울 심플 룩 #개강 첫날 #벌써 개강이라니</h4>
                     <div class="codi__explanation">
-                        <p>각 아이템들의 시각적 나열 순서를 결정하는 속성이예요.</p>
-                        <p>
-                            숫자값이 들어가며, 작은 숫자일 수록 먼저 배치됩니다. "시각적" 순서일 뿐, HTML 자체의 
-                            구조를 바꾸는 것은 아니므로 접근성 측면에서 사용에 주의하셔야 합니다. 시각 장애인분들이 
-                            사용하는 스크린 리더로 화면을 읽을 때, order를 이용해 순서를 바꾼 것은 의미가 없다는 것을 
-                            기억해 주세요.
-                        </p>
+                        각 아이템들의 시각적 나열 순서를 결정하는 속성이예요.
+                        숫자값이 들어가며, 작은 숫자일 수록 먼저 배치됩니다. "시각적" 순서일 뿐, HTML 자체의 
+                        구조를 바꾸는 것은 아니므로 접근성 측면에서 사용에 주의하셔야 합니다. 시각 장애인분들이 
+                        사용하는 스크린 리더로 화면을 읽을 때, order를 이용해 순서를 바꾼 것은 의미가 없다는 것을 
+                        기억해 주세요.
                     </div>
                 </div>
 
                 <section class="codi__relation">
                     <!-- 연관된 옷 -->
-                    <div class="relation__showSimilar"><b>비슷한 상품 보기</b></div>
+                    <div><b>비슷한 상품 보기</b></div>
                     <div class="relation__table">
-                        <a class="relation__imgOut" href="../product/product-detail.html">
+                        <a class="relation__imgOut" href="https://joooohee.tistory.com/52">
                             <img class="relation__img" src={% static "Codi/img/dotRelation1.jpg" %}>
-                            <p class="relation__name">올데이 시원한 브이넥</p>  
-                            <p class="relation__price">23,000</p>
+                            <p>올데이 시원한 브이넥</p>  
+                            <p>23,000</p>
                         </a>
-                        <a class="relation__imgOut" href="../product/product-detail.html">
+                        <a class="relation__imgOut" href="https://joooohee.tistory.com/52">
                             <img class="relation__img" src={% static "Codi/img/dotRelation3.jpg" %}>
-                            <p class="relation__name">폴리 하프 니트</p>
-                            <p class="relation__price">23,000</p>
+                            <p>폴리 하프 니트</p>
+                            <p>23,000</p>
                         </a>
-                        <a class="relation__imgOut" href="../product/product-detail.html">
+                        <a class="relation__imgOut" href="https://joooohee.tistory.com/52">
                             <img class="relation__img" src={% static "Codi/img/dotRelation2.jpg" %}>
-                            <p class="relation__name">폴리 하프 니트</p>
-                            <p class="relation__price">23,000</p>
+                            <p>폴리 하프 니트</p>
+                            <p>23,000</p>
                         </a>
-                        <a class="relation__imgOut" href="../product/product-detail.html">
+                        <a class="relation__imgOut" href="https://joooohee.tistory.com/52">
                             <img class="relation__img" src={% static "Codi/img/dotRelation4.jpg" %}>
-                            <p class="relation__name">폴리 하프 니트</p>
-                            <p class="relation__price">23,000</p>
+                            <p>폴리 하프 니트</p>
+                            <p>23,000</p>
                         </a>
-                        <a class="relation__imgOut" href="../product/product-detail.html">
+                        <a class="relation__imgOut" href="https://joooohee.tistory.com/52">
                             <img class="relation__img" src={% static "Codi/img/dotRelation4.jpg" %}>
-                            <p class="relation__name">폴리 하프 니트</p>
-                            <p class="relation__price">23,000</p>
+                            <p>폴리 하프 니트</p>
+                            <p>23,000</p>
                         </a>
-                        <a class="relation__imgOut" href="../product/product-detail.html">
+                        <a class="relation__imgOut" href="https://joooohee.tistory.com/52">
                             <img class="relation__img" src={% static "Codi/img/dotRelation4.jpg" %}>
-                            <p class="relation__name">폴리 하프 니트</p>
-                            <p class="relation__price">23,000</p>
+                            <p>폴리 하프 니트</p>
+                            <p>23,000</p>
                         </a>
                         <div>
                             더보기
                         </div>
-                    </div> 
+                    </div>
+                    
                 </section>
-
             </section>
         </article>
 
-        <div class="showMore">
-            <button class="showMore__btn">더보기</button>
-        </div>
+        <article class="codiEffect">
+            <section class="codi">
+                <!-- 옷 하나 -->
+                <div class="codi__effectImg">
+                    <div class="codi__imgOut">
+                        <img class="codi__img" src={% static "Codi/img/productDot1.jpg" %}>
+                    </div>
+    
+                    <section class="effectCodiDot">
+                        <div class="effect__dot">
+                            <a href="https://joooohee.tistory.com/52">
+                                <span id="dot1" class="dot__dotOut">
+                                    <span class="dot__dot"></span>
+                                </span>
+                            </a>
+                            <div id="info1" class="dot__info">
+                                <p class="dot__name">베이직 니트</p>
+                                <p class="dot__price">25,000</p>
+                            </div>
+                        </div>
+                        <div class="effect__dot">
+                            <a href="https://joooohee.tistory.com/52">
+                                <span id="dot2" class="dot__dotOut">
+                                    <span class="dot__dot"></span>
+                                </span>
+                            </a>
+                            <div id="info2" class="dot__info">
+                                <p class="dot__name">바지</p>
+                                <p class="dot__price">30,000</p>
+                            </div>
+                        </div>
+                        <div class="effect__dot">
+                            <a href="https://joooohee.tistory.com/52">
+                                <span id="dot3" class="dot__dotOut">
+                                    <span class="dot__dot"></span>
+                                </span>
+                            </a>
+                            <div id="info3" class="dot__info">
+                                <p class="dot__name">심플 양말</p>
+                                <p class="dot__price">2,000</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                <div class="codi__info">
+                    <!-- 옷 설명 -->
+                    <h4 class="codi__tag">#겨울 심플 룩 #개강 첫날 #벌써 개강이라니</h4>
+                    <div class="codi__explanation">
+                        각 아이템들의 시각적 나열 순서를 결정하는 속성이예요.
+                        숫자값이 들어가며, 작은 숫자일 수록 먼저 배치됩니다. "시각적" 순서일 뿐, HTML 자체의 
+                        구조를 바꾸는 것은 아니므로 접근성 측면에서 사용에 주의하셔야 합니다. 시각 장애인분들이 
+                        사용하는 스크린 리더로 화면을 읽을 때, order를 이용해 순서를 바꾼 것은 의미가 없다는 것을 
+                        기억해 주세요.
+                    </div>
+                </div>
+
+                <section class="codi__relation">
+                    <!-- 연관된 옷 -->
+                    <div><b>비슷한 상품 보기</b></div>
+                    <div class="relation__table">
+                        <a class="relation__imgOut" href="https://joooohee.tistory.com/52">
+                            <img class="relation__img" src={% static "Codi/img/dotRelation1.jpg" %}>
+                            <p>올데이 시원한 브이넥</p>  
+                            <p>23,000</p>
+                        </a>
+                        <a class="relation__imgOut" href="https://joooohee.tistory.com/52">
+                            <img class="relation__img" src={% static "Codi/img/dotRelation3.jpg" %}>
+                            <p>폴리 하프 니트</p>
+                            <p>23,000</p>
+                        </a>
+                        <a class="relation__imgOut" href="https://joooohee.tistory.com/52">
+                            <img class="relation__img" src={% static "Codi/img/dotRelation2.jpg" %}>
+                            <p>폴리 하프 니트</p>
+                            <p>23,000</p>
+                        </a>
+                        <a class="relation__imgOut" href="https://joooohee.tistory.com/52">
+                            <img class="relation__img" src={% static "Codi/img/dotRelation4.jpg" %} >
+                            <p>폴리 하프 니트</p>
+                            <p>23,000</p>
+                        </a>
+                        <a class="relation__imgOut" href="https://joooohee.tistory.com/52">
+                            <img class="relation__img" src={% static "Codi/img/dotRelation4.jpg" %} >
+                            <p>폴리 하프 니트</p>
+                            <p>23,000</p>
+                        </a>
+                        <a class="relation__imgOut" href="https://joooohee.tistory.com/52">
+                            <img class="relation__img" src={% static "Codi/img/dotRelation4.jpg" %}>
+                            <p>폴리 하프 니트</p>
+                            <p>23,000</p>
+                        </a>
+                        <div>
+                            더보기
+                        </div>
+                    </div>
+                    
+                </section>
+            </section>
+        </article>
     </main>
 
     <footer>
-        <div>
-            <p>(20219)서울특별시 아치구 너머로 128-7</p>
-            <p>대표번호 : 032-658-4455 이메일 : enalCloth@naver.com</p>
-            <p>Copyright 2001 Enal All rights Reserved.</p>
-        </div>
+        <!-- 미정. -->
     </footer>
 </body>
 </html>
