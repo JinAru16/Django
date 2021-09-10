@@ -1,0 +1,148 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src={% static "Main/js/main.js" %}></script>
+    <title> 이 날 뭐입지</title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> <!-- 아이콘 -->
+    <!-- <script src="https://kit.fontawesome.com/f5e7b03b5b.js"></script> -->
+    <link rel="stylesheet" href={% static "Main/css/mainstyle.css" %}>
+</head>
+
+<body>
+    <div class = "container">
+        <nav id="mypage">
+            <ul>
+                <li><a href="{% url 'account_login' %}">로그인</a></li>
+                <li><a href="{% url 'account_signup' %}">회원가입</a></li>
+                <li><a href="/ShoppingCart">장바구니<i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="/Order">주문<i class="fas fa-truck"></i></a></li>
+                <li><a href="/MyPage">마이페이지</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1 id="logo"><a id="mainLogo" href="">오늘 뭐입지</a></h1>
+            
+            <nav id="category">
+                <ul>
+                    <li><a href="/Best">BEST</a></li>
+                    <li><a href="/New">NEW</a></li>
+                    <li><a href="/Codi">Codi</a></li>
+                    <li><a href ="/Top">Top</a></li>
+                    <li><a href ="/Pants">Pants</a></li>
+                    <li><a href ="/Shoes_and_Bag">Shoes/Bag</a></li>
+                </ul>
+                <span id="nav_menubar"><i class="fas fa-bars"></i></span>
+                <span id="nav_search"><i class="fas fa-search"></i></span>
+            </nav>
+        </header>
+
+        <nav id="menuWrap">
+            <span id="navbar_x"><i class="fas fa-times"></i></span>
+            <ul>
+                <li><a href="/Login">로그인</a></li>
+                <li><a href="/Resistration">회원가입</a></li>
+                <li><a href="/ShoppingCart">장바구니<i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="/Order">주문<i class="fas fa-truck"></i></a></li>
+                <li><a href="/MyPage">마이페이지</a></li> 
+                <hr>
+                <li><a href="/Best">BEST</a></li>
+                <li><a href="/New">NEW</a></li>
+                <li><a href ="/Top">Top</a></li>
+                <li><a href ="/Bottom">Bottom</a></li>
+                <li><a href ="/Dress">Dress</a></li>
+                <li><a href ="/Outer">Outer</a></li>
+                <li><a href ="/Shirt_Blouse">Shirt/Blouse </a></li>
+                <li><a href ="/Outer">Outer</a></li>
+                <li><a href ="/Summer_Knit">Summer Knit</a></li>
+                
+                
+            </ul>
+        </nav>
+        <!-- <div id="dimmed"></div> -->
+
+        <section class="content">
+            <div id="mainbenu">
+                <img width="100%" src={% static "Main/img/mainbenu1.jpg" %}> <!-- 메인 베너 이미지 -->
+            </div>
+
+            <!-- 메인 컨텐트 영역 -->
+            <main>
+                <!-- 위클리 베스트 -->
+                <article>
+                    <h3 class="subtitle">#WEEKLY BEST</h3>
+                    <div class="closet">
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src={% static "Top/img/clothes1.jpg" %}></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src={% static "Top/img/clothes1.jpg" %}></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src={% static "Top/img/clothes1.jpg" %}></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src={% static "Top/img/clothes1.jpg" %}></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src={% static "Top/img/clothes1.jpg" %}></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src={% static "Top/img/clothes1.jpg" %}></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src={% static "Top/img/clothes1.jpg" %}></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src={% static "Top/img/clothes1.jpg" %}></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- 먼슬리 베스트 -->
+                <article>
+                    <h3 class="subtitle">#MONTHLY BEST</h3>
+                    <div class="closet">
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                        <div class="clothes">
+                            <a><img class = "clothesImg" src="clothes1.jpg"></a>
+                            <p><a>썸머 쿨 아리랑</a></p>
+                            <p>15000</p>
+                        </div>
+                    </div>
+                </article>
+            </main>
+        </section>
+
+        <footer>
+            <!-- 미정. -->
+        </footer>
+    </div>
+
+        init();
+    </script>
+</body>
+</html>
