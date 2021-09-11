@@ -38,7 +38,7 @@ urlpatterns = [
     path('ShoppingCart/', include('ShoppingCart.urls')),
     path('Order/', include('Order.urls')),
     path('MyPage/', include('MyPage.urls')),
-
+    path('Detail/', include('Detail.urls'))
 
 
     

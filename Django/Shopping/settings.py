@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!($96s*ks866q976mfprao&ulmfuu_v^fzt%@09i#r=3+*uun%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.pythonanywhere.com']
 
 
 # Application definition
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'Order', #9
     'MyPage', #7
     'Codi',
+    'Detail',
 
 
     # about allauth
@@ -151,9 +152,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # base_dir은 프로젝트 폴더
-]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 
@@ -174,7 +174,7 @@ AUTHENTICATION_BACKENDS = [
 
 ACCOUNT_SIGNUP_REDIRECT_URLS = 'index'
 
-LOGIN_REDIRECT_URL ='index'
+LOGIN_REDIRECT_URL ='/Main'
 
 ACCOUNT_LOGOUT_ON_GET = True
 
@@ -192,4 +192,4 @@ ACCOUNT_USERNAME_REQUIRED = True
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+

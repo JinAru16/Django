@@ -1,0 +1,225 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이날 뭐입지</title>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> <!-- 아이콘 -->
+    <!-- <script src="https://kit.fontawesome.com/f5e7b03b5b.js"></script> -->
+    <script defer src={% static "Main/js/basicjs.js" %}></script> <!-- js파일 -->
+    <script defer src={% static "Detail/js/product.js" %}></script>
+    <link rel="stylesheet" href={% static "Main/css/basic_style.css" %}> <!-- css파일 -->
+    <link rel="stylesheet" href={% static "Detail/css/product_style.css" %}> 
+</head>
+
+<body>
+    <header>
+        <nav id="userPage">
+            <ul>
+                <li><a href="/Login">로그인</a></li>
+                <li><a href="/Registration">회원가입</a></li>
+                <li><a href="/ShoppingCart">장바구니<i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="/Order">주문<i class="fas fa-truck"></i></a></li>
+                <li><a href="/MyPage">마이페이지</a></li>
+            </ul>
+        </nav>
+        
+        <div id="head">
+            <!-- 메인 로고 -->
+            <h1 id="head__mainlogo"><a href="/Main">이날 뭐입지</a></h1>
+            <!-- 옷 카테고리 -->
+            <nav class="head__category">
+                <ul>
+                    <li><a href="/Best">BEST</a></li>
+                    <li><a href="/New">NEW</a></li>
+                    <li><a href="/Codi">CODI</a></li>
+                    <li><a href="/Top">TOP</a></li>
+                    <li><a href="/Pants">PANTS</a>
+                    <li><a href="/Shoes_and_Bag">SHOES & BAG</a></li>
+                </ul>
+                <span id="head__menuBtn"><i class="fas fa-bars"></i></span>
+                <span id="head__searchBtn"><i class="fas fa-search"></i></span>
+            </nav>
+
+            <!-- 메뉴바 -->
+            <div id="menubar_overlay"> 
+                <nav id="menuWrap">
+                    <span id="menubar__xBtn"><i class="fas fa-times"></i></span>
+                    <ul>
+                        <li><a href="/Login">로그인</a></li>
+                        <li><a href="/Registration">회원가입</a></li>
+                        <li><a href="/ShoppingCart">장바구니</a></li>
+                        <li><a href="/Order">주문</a></li>
+                        <li><a href="/MyPage">마이페이지</a></li>
+                        <hr>
+                        <li><a href="/Best">BEST</a></li>
+                        <li><a href="/New">NEW</a></li>
+                        <li><a href="/Codi">CODI</a></li>
+                        <li><a href="/Top">TOP</a></li>
+                        <li><a href="/Pants">PANTS</a></li>
+                        <li><a href="/Shoes_and_Bag">SHOES & BAG</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="pagebox">
+                <div class="productImg">
+                <div><img class="clothesImg" src={% static "Detail/img/clothes1.jpg" %}></div>
+                </div>
+                <div class="mainclothes">
+                    <h3>[1+1] [남녀공용] 썸머 아노락 셋업</h3>
+                    <table>
+                    <tr>
+                            <th>INFO</th>
+                            <td>남녀노소 누구나 착용할 수 있는 아노락 셋업입니다.<br>
+                                남녀 두 사이즈로 제작되어, 커플, 가족, 친구들과 함께 즐겨 입을 수 있으며,<br>
+                                베이직한 색감으로 제작되어 데일리룩으로 편하게 즐겨 입기 좋습니다.<br>
+                                또한 통풍성이 매우 좋기 때문에,<br>
+                                무더운 여름 날에 착용하기 제일 베스트인 셋업입니다.<br>
+                                착용감이 우수한 아이템으로 적극 추천 드리는 상품입니다 :)
+                            </td>
+                            </tr>
+                            <tr>
+                            <th>Color / SIZE</th>
+                            <td>
+                                (4 color) / F(26-29), L(30-33)
+                            </td>
+                            </tr>
+                            <tr>
+                            <th>PRICE</th>
+                            <td>28,000원</td>
+                            </tr>
+                            <tr>
+                            <th class="saleFont">SALE PRICE</th>
+                            <td class="saleFont">16,900원 (11,100원 할인)</td>
+                            </tr>
+                            <tr>
+                            <th>수량</th>
+                            <td>
+                                <form method="GET" action="">
+                                    <input type="text" name="quantity">
+                                    </select>
+                                </form>
+                            </td>
+                            </tr>
+                            <tr>
+                                <th>선택 01</th>
+                                <td>
+                                    <form method="GET" action="">
+                                        <select name="product" size="1">
+                                            <option>- [필수] 선택 01 선택 -</option>
+                                            <option>화이트 F(26-29)</option>
+                                            <option>화이트 L(30-33)</option>
+                                            <option>블랙 F(26-29)</option>
+                                            <option>블랙 L(30-33)</option>
+                                            <option>베이지 F(26-29)</option>
+                                            <option>베이지 L(30-33)</option>
+                                            <option>카키 F(26-29)</option>
+                                            <option>카키 L(30-33)</option>
+                                        </select>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>선택 02</th>
+                                <td>
+                                    <form method="GET" action="">
+                                        <select name="product" size="1">
+                                            <option>- [필수] 선택 02 선택 -</option>
+                                            <option>화이트 F(26-29)</option>
+                                            <option>화이트 L(30-33)</option>
+                                            <option>블랙 F(26-29)</option>
+                                            <option>블랙 L(30-33)</option>
+                                            <option>베이지 F(26-29)</option>
+                                            <option>베이지 L(30-33)</option>
+                                            <option>카키 F(26-29)</option>
+                                            <option>카키 L(30-33)</option>
+                                        </select>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="buttons">
+                                    <input type="image" src={% static "Detail/img/buy.jpg" %} alt="구매하기"/>
+                                    <input type="image" src={% static "Detail/img/cart.jpg" %}alt="장바구니"/>
+                                    <input type="image" src={% static "Detail/img/heart.jpg" %}alt="찜"/>
+                                </td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+        </section>
+
+        <nav id="product_menu">
+            <ul>
+                <li><a href="#product_detail">상세정보</a></li>
+                <li><a href="#product_review">리뷰</a></li>
+                <li><a href="#product_qAa">Q&A</a></li>
+            </ul>
+        </nav>
+        
+        <section class="product_info">
+            <!-- 상세정보 -->
+            <section class="product_detail">
+                <a name="product_detail"><div>상세정보</div></a>
+                
+                <img src={% static "Detail/img/product1.jpg" %}>
+                <img src={% static "Detail/img/product2.jpg" %}>
+            </section>
+
+            <!-- <p>리뷰</p> -->
+            <section class="product_review">
+                <a name="product_review"></a>
+
+                <div id="total_review">
+                    <div>
+                        <p>사용자 총 평점</p>
+                        <p id="total_star" class="review__total">4.8</p>
+                    </div>
+                    <div>
+                        <p>전체 리뷰수</p>
+                        <p id="total_numOfReview" class="review__total">1234</p>
+                    </div>
+                </div>
+
+                <section class="reviewList">
+                <!-- <div class="review__unit">
+                        <div class="review__star">
+                            <p>별점</p>
+                        </div>
+                        <div class="review__id_date">
+                            <p>아이디 / 날짜</p>
+                        </div>
+                        <div class="review__productName">
+                            <p>제품 이름</p>
+                        </div>
+                        <div class="review__content">
+                            <p>>리뷰 내용</p>
+                        </div>
+                    </div>
+                    <hr>-->
+                </section>
+            </section>
+            
+            <!-- 큐엔에이. 지금 당장 필요한 내용은 아닌 것 같아 일단 빈칸으로 냅뒀습니다! -->
+            <section class="product_qAa">
+                <a name="product_qAa"></a>
+                <p>Q&A</p>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>(20219)서울특별시 아치구 너머로 128-7</p>
+            <p>대표번호 : 032-658-4455 이메일 : enalCloth@naver.com</p>
+            <p>Copyright 2001 Enal All rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

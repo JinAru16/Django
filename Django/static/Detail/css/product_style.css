@@ -1,0 +1,129 @@
+/* 주 컨텐즈 영역 */
+.pagebox{
+    padding: 60px;
+    padding-left: 90px;
+    padding-right: 90px;
+    border-style: none;
+    /* margin-bottom: 80px; */
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+table{
+    border-color: white;
+    border-spacing: 8px;
+    line-height: 120%;
+    table-layout: fixed;
+}
+
+th{
+    width: 30%;
+    height: auto;
+    text-align: left;
+    font-size: small;
+}
+
+td{
+    width: 100%;
+    height: auto;
+    font-size: smaller;
+}
+
+.buttons{
+    text-align: right;
+}
+
+.productImg{ /*상품 대표 이미지*/
+    width:450px;
+    height: 620px;
+    float: left;
+    padding: 10px 30px;
+    border: 1px solid lightgray;
+}
+.mainclothes{
+    padding: 10px 30px;
+    border: 1px solid lightgray;
+    border-left: none;
+}
+
+.clothesImg{ /*옷 이미지*/
+    width: 100%;
+}
+
+.saleFont{
+    color: red;
+}
+/* 상세정보, 리뷰, Q&A 메뉴 있는 곳 */
+#product_menu{
+    background-color:white;
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 60px;
+    position:sticky; /*스크롤 했을 때 위에 남아있으라고*/
+    top: 0;
+}
+#product_menu > ul {
+    /* background-color: darkgrey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    padding: 0px 30%; /*보니까 세로 가로더라*/
+}
+#product_menu li{
+    /* background-color: burlywood; */
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width:200px;
+    font-size: 1.5rem;
+}
+#product_menu li:hover{
+    background-color: var(--basic-gray-color);
+}
+
+.product_info{ /*상품 설명 전체(상세정보, 리뷰..)를 아우르는*/
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    max-width:1200px;
+    margin:auto;
+}
+.product_detail{ /*상세정보*/
+    text-align: center;
+    padding: 30px;
+    border-bottom: 3px solid black;
+}
+
+/* 상품 리뷰 */
+.product_review{
+    padding: 30px;
+    border-bottom: 3px solid black;
+}
+/* 상품 전체 리뷰평균 */
+#total_review{
+    background-color: var(--basic-gray-color);
+    height: 180px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.review__total{
+    text-align: center; 
+    font-size: 2rem;
+}
+/* 구매자별 리뷰 */
+.review__unit{
+    padding:8px 50px;
+}
+.review__star{
+    color: red;
+}
+
+/* 상품 큐엔에이 */
+.product_qAa{
+    padding: 30px;
+}

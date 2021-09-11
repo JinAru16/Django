@@ -1,0 +1,116 @@
+/* 메인베너 슬라이드 이미지 */
+#mainbenu__overlay{
+    /* background-color: antiquewhite; */
+    width:1903px;
+    height:750px;
+    position: relative;
+    overflow: hidden; /*이러면 이 크기를 넘어서서 있는 것들을 숨김*/
+    z-index: 1; /*맨앞으로 보내기같은거. 숫자가 클수록 위에있음.*/
+}
+.mainbenu__imgList{
+    display: flex; /*flex로 해야 이미지들이 알아서 옆으로 나열됨.*/
+    position:absolute; /*그래야 맨 첫번째 이미지부터 보이게 할 수 있음.*/
+    top:0;
+    left:0;
+    transition: left ease 0.3s;
+}
+.mainbenu__img{
+    /* background-color: yellow; */
+    width:inherit;
+    height:inherit;
+}
+.mainbenu__tempImg{
+    width:fit-content;
+    height: fit-content;
+}
+
+/* 메인베너 슬라이드 이미지 화살표버튼 */
+.mainbenu__direc{
+    font-size: 2rem;
+    color: rgba(82, 82, 82, 0.596);
+    cursor: pointer;
+    position:absolute;
+    display: inline;
+}
+.mainbenu__direc#back{
+    /* background-color: blue; */
+    top: 50%;
+    margin-left: 20px;
+}
+.mainbenu__direc#front{
+    /* background-color: blue; */
+    top: 50%;
+    right: 0;
+    margin-right: 20px;
+}
+
+/* 메인베너 슬라이드 이미지 밑에 점 */
+.mainbenu__dotList{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+}
+.mainbenu__dot{
+    background-color: rgba(172, 172, 172, 0.493);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 0 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+.active, .mainbenu__dot:hover{
+    background-color: rgb(138, 138, 138);
+}
+
+
+/* 주 컨텐즈 영역 */
+main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 65px;
+    
+}
+.content div#mainbenu{ /*제일 큰 사진*/
+    margin-bottom: 100px;
+}
+.content .bestContent{ /*메인 영역*/
+    margin: auto; /*가운데 정렬*/
+    /* min-width: 1400px; 폭 고정하려고 */
+    /* max-width: 1400px; */
+}
+/*위클리 베스트, 먼슬리 베스트 있는 곳*/
+.bestProduct{ 
+    margin-top: 100px;
+    max-width: 1400px;
+}
+.bestProduct__subtitle{ /*제목*/
+    /* background-color: palegreen; */
+    text-align: center; /*가운데 정렬*/
+    font-size: 1.6rem;
+    margin-bottom: 100px;
+}
+.bestProduct__bundle{ /*옷(이미지) 묶음. 위클리 베스트 등등*/
+    /* background-color: cadetblue; */
+    display:flex;
+    justify-content: space-around;
+}
+.bestProduct__cloth{ /*옷 이미지와 이름,가격 묶음*/
+    max-width:330px;
+    max-height: 400px;
+    margin: 0 5px;
+    /* background-color: palevioletred; */
+}
+.clothesImg{ /*옷 이미지*/
+    width: 100%;
+}
+.bestProduct__viewAll{
+    /* background-color: cyan; */
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    color: blue;
+}
