@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eae0eee3-9d7f-4970-80f9-546a469d2d1b" name="Default Changelist" comment="" />
+    <list default="true" id="eae0eee3-9d7f-4970-80f9-546a469d2d1b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Shopping/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Shopping/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1631187422530</updated>
       <workItem from="1631187424983" duration="17000" />
+      <workItem from="1632461025197" duration="51000" />
     </task>
     <servers />
   </component>
